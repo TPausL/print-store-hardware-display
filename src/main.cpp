@@ -116,7 +116,7 @@ void setup()
     ui_init(); // The Squareline interface
     setCpuFrequencyMhz(240);
     attachInterrupt(digitalPinToInterrupt(BTN_C), swapInOut, RISING);
-    lv_disp_load_scr(ui_Screen2);
+    lv_disp_load_scr(ui_Screen1);
 }
 
 void loop()
