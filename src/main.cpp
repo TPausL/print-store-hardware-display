@@ -105,8 +105,31 @@ void swapInOut()
     in = !in;
 }
 
+static int screen = 1;
+
+void changeScreen()
+{
+    if (screen == 1)
+    {
+        screen = 2;
+        lv_disp_load_scr(ui_Step2);
+    }
+    else if (screen == 2)
+    {
+        screen = 3;
+        lv_disp_load_scr(ui_Step3);
+    }
+    else
+    {
+        screen = 1;
+        lv_disp_load_scr(ui_Step1);
+    }
+}
+
 void setup()
 {
+
+    // WiFi.setSleep(false); // Behebt bug mit Button A
     pinMode(GPIO_NUM_39, INPUT);
     pinMode(GPIO_NUM_38, INPUT);
     pinMode(GPIO_NUM_37, INPUT);
@@ -116,7 +139,8 @@ void setup()
     ui_init(); // The Squareline interface
     setCpuFrequencyMhz(240);
     attachInterrupt(digitalPinToInterrupt(BTN_C), swapInOut, RISING);
-    lv_disp_load_scr(ui_Screen1);
+    attachInterrupt(digitalPinToInterrupt(BTN_A), changeScreen, RISING);
+    lv_disp_load_scr(ui_Step1);
 }
 
 void loop()
@@ -126,13 +150,13 @@ void loop()
         prev_in = in;
         if (in)
         {
-            lv_img_set_src(ui_InOutIcon, &ui_img_plus_solid_png);
-            lv_label_set_text(ui_InOutText, "Hinzufuegen");
+            lv_img_set_src(ui_InOutIconS1, &ui_img_plus_solid_png);
+            lv_label_set_text(ui_InOutTextS1, "Hinzufuegen");
         }
         else
         {
-            lv_img_set_src(ui_InOutIcon, &ui_img_minus_solid_png);
-            lv_label_set_text(ui_InOutText, "Entfernen");
+            lv_img_set_src(ui_InOutIconS1, &ui_img_minus_solid_png);
+            lv_label_set_text(ui_InOutTextS1, "Entfernen");
         }
     }
     M5.update();

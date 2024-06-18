@@ -5,3 +5,6 @@
 .vscode/ipch
 include/secrets.h
 *.pyc
+squareline_project/autosave
+squareline_project/backup
+squareline_project/cache

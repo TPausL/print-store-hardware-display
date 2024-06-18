@@ -1,12 +1,19 @@
-SET(SOURCES ui_Screen1.c
-    ui_Screen2.c
+SET(SOURCES ui_Step1.c
+    ui_Step2.c
+    ui_Step3.c
     ui.c
     ui_comp_hook.c
     ui_helpers.c
     ui_events.cpp
+    ui_img_bg_arc_png.c
     ui_img_camera_solid_png.c
     ui_img_plus_solid_png.c
     ui_img_minus_solid_png.c
-    ui_img_circle_solid_png.c)
+    ui_img_circle_solid_large_png.c
+    ui_img_circle_solid_png.c
+    ui_img_circle_solid_red_png.c
+    ui_img_circle_solid_green_png.c
+    ui_img_redo_alt_solid_png.c
+    ui_img_trash_alt_solid_png.c)
 
 add_library(ui ${SOURCES})

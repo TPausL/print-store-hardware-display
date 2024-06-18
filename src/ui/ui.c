@@ -7,35 +7,72 @@
 #include "ui_helpers.h"
 
 ///////////////////// VARIABLES ////////////////////
+void ZoomCircleIn_Animation(lv_obj_t * TargetObject, int delay);
+void ZoomCircleOut_Animation(lv_obj_t * TargetObject, int delay);
 
 
-// SCREEN: ui_Screen1
-void ui_Screen1_screen_init(void);
-lv_obj_t * ui_Screen1;
-lv_obj_t * ui_Container2;
-lv_obj_t * ui_LeftRow;
-lv_obj_t * ui_CenterCol;
-lv_obj_t * ui_ScanIcon;
-lv_obj_t * ui_ScanText;
-lv_obj_t * ui_RightCol;
-lv_obj_t * ui_InOutIcon;
-lv_obj_t * ui_InOutText;
-lv_obj_t * ui_MinusIcon;
-lv_obj_t * ui_Container3;
+// SCREEN: ui_Step1
+void ui_Step1_screen_init(void);
+lv_obj_t * ui_Step1;
+lv_obj_t * ui_BottomRowS1;
+lv_obj_t * ui_LeftColS1;
+lv_obj_t * ui_CenterColS1;
+lv_obj_t * ui_ScanIconS1;
+lv_obj_t * ui_ScanTextS1;
+lv_obj_t * ui_RightColS1;
+lv_obj_t * ui_InOutIconS1;
+lv_obj_t * ui_InOutTextS1;
+lv_obj_t * ui_MinusIconS1;
+lv_obj_t * ui_TopRowS1;
+lv_obj_t * ui_Circle1S1;
+lv_obj_t * ui_Circle1TextS1;
+lv_obj_t * ui_Divider1S1;
+lv_obj_t * ui_Circle2S1;
+lv_obj_t * ui_Circle2TextS1;
+lv_obj_t * ui_Divider2S1;
+lv_obj_t * ui_Circle3S1;
+lv_obj_t * ui_Circle3TextS1;
 lv_obj_t * ui_Image2;
+
+
+// SCREEN: ui_Step2
+void ui_Step2_screen_init(void);
+lv_obj_t * ui_Step2;
+lv_obj_t * ui_TopRowS3;
+lv_obj_t * ui_Circle1S3;
+lv_obj_t * ui_Circle1TextS3;
+lv_obj_t * ui_Divider1S3;
+lv_obj_t * ui_Circle2S3;
+lv_obj_t * ui_Circle2TextS3;
+lv_obj_t * ui_Divider2S3;
+lv_obj_t * ui_Circle3S3;
+lv_obj_t * ui_Circle3TextS3;
+lv_obj_t * ui_Container2;
+lv_obj_t * ui_Spinner3;
 lv_obj_t * ui_Label1;
-lv_obj_t * ui_Panel1;
-lv_obj_t * ui_Image1;
-lv_obj_t * ui_Label2;
-lv_obj_t * ui_Panel2;
-lv_obj_t * ui_Image3;
+
+
+// SCREEN: ui_Step3
+void ui_Step3_screen_init(void);
+lv_obj_t * ui_Step3;
+lv_obj_t * ui_TopRowS4;
+lv_obj_t * ui_Circle1S4;
+lv_obj_t * ui_Circle1TextS4;
+lv_obj_t * ui_Divider1S4;
+lv_obj_t * ui_Circle2S4;
+lv_obj_t * ui_Circle2TextS4;
+lv_obj_t * ui_Divider2S4;
+lv_obj_t * ui_Circle3S4;
+lv_obj_t * ui_Circle3TextS4;
 lv_obj_t * ui_Label3;
-
-
-// SCREEN: ui_Screen2
-void ui_Screen2_screen_init(void);
-lv_obj_t * ui_Screen2;
-lv_obj_t * ui_Spinner2;
+lv_obj_t * ui_BottomRowS3;
+lv_obj_t * ui_LeftColS3;
+lv_obj_t * ui_CenterColS3;
+lv_obj_t * ui_ScanIconS3;
+lv_obj_t * ui_ScanTextS3;
+lv_obj_t * ui_RightColS3;
+lv_obj_t * ui_InOutIconS3;
+lv_obj_t * ui_InOutTextS3;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -47,6 +84,52 @@ lv_obj_t * ui____initial_actions0;
 #endif
 
 ///////////////////// ANIMATIONS ////////////////////
+void ZoomCircleIn_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 250);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_image_zoom);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 100);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_ease_in_out);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_set_get_value_cb(&PropertyAnimation_0, &_ui_anim_callback_get_image_zoom);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void ZoomCircleOut_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 250);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_image_zoom);
+    lv_anim_set_values(&PropertyAnimation_0, 0, -80);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_ease_in_out);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, true);
+    lv_anim_set_get_value_cb(&PropertyAnimation_0, &_ui_anim_callback_get_image_zoom);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
 
 ///////////////////// FUNCTIONS ////////////////////
 
@@ -58,8 +141,9 @@ void ui_init(void)
     lv_theme_t * theme = lv_theme_default_init(dispp, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED),
                                                true, LV_FONT_DEFAULT);
     lv_disp_set_theme(dispp, theme);
-    ui_Screen1_screen_init();
-    ui_Screen2_screen_init();
+    ui_Step1_screen_init();
+    ui_Step2_screen_init();
+    ui_Step3_screen_init();
     ui____initial_actions0 = lv_obj_create(NULL);
-    lv_disp_load_scr(ui_Screen1);
+    lv_disp_load_scr(ui_Step1);
 }

@@ -25,37 +25,78 @@ extern "C" {
 #include "ui_helpers.h"
 #include "ui_events.h"
 
-// SCREEN: ui_Screen1
-void ui_Screen1_screen_init(void);
-extern lv_obj_t * ui_Screen1;
-extern lv_obj_t * ui_Container2;
-extern lv_obj_t * ui_LeftRow;
-extern lv_obj_t * ui_CenterCol;
-extern lv_obj_t * ui_ScanIcon;
-extern lv_obj_t * ui_ScanText;
-extern lv_obj_t * ui_RightCol;
-extern lv_obj_t * ui_InOutIcon;
-extern lv_obj_t * ui_InOutText;
-extern lv_obj_t * ui_MinusIcon;
-extern lv_obj_t * ui_Container3;
+void ZoomCircleIn_Animation(lv_obj_t * TargetObject, int delay);
+void ZoomCircleOut_Animation(lv_obj_t * TargetObject, int delay);
+// SCREEN: ui_Step1
+void ui_Step1_screen_init(void);
+extern lv_obj_t * ui_Step1;
+extern lv_obj_t * ui_BottomRowS1;
+extern lv_obj_t * ui_LeftColS1;
+extern lv_obj_t * ui_CenterColS1;
+extern lv_obj_t * ui_ScanIconS1;
+extern lv_obj_t * ui_ScanTextS1;
+extern lv_obj_t * ui_RightColS1;
+extern lv_obj_t * ui_InOutIconS1;
+extern lv_obj_t * ui_InOutTextS1;
+extern lv_obj_t * ui_MinusIconS1;
+extern lv_obj_t * ui_TopRowS1;
+extern lv_obj_t * ui_Circle1S1;
+extern lv_obj_t * ui_Circle1TextS1;
+extern lv_obj_t * ui_Divider1S1;
+extern lv_obj_t * ui_Circle2S1;
+extern lv_obj_t * ui_Circle2TextS1;
+extern lv_obj_t * ui_Divider2S1;
+extern lv_obj_t * ui_Circle3S1;
+extern lv_obj_t * ui_Circle3TextS1;
 extern lv_obj_t * ui_Image2;
+// SCREEN: ui_Step2
+void ui_Step2_screen_init(void);
+extern lv_obj_t * ui_Step2;
+extern lv_obj_t * ui_TopRowS3;
+extern lv_obj_t * ui_Circle1S3;
+extern lv_obj_t * ui_Circle1TextS3;
+extern lv_obj_t * ui_Divider1S3;
+extern lv_obj_t * ui_Circle2S3;
+extern lv_obj_t * ui_Circle2TextS3;
+extern lv_obj_t * ui_Divider2S3;
+extern lv_obj_t * ui_Circle3S3;
+extern lv_obj_t * ui_Circle3TextS3;
+extern lv_obj_t * ui_Container2;
+extern lv_obj_t * ui_Spinner3;
 extern lv_obj_t * ui_Label1;
-extern lv_obj_t * ui_Panel1;
-extern lv_obj_t * ui_Image1;
-extern lv_obj_t * ui_Label2;
-extern lv_obj_t * ui_Panel2;
-extern lv_obj_t * ui_Image3;
+// SCREEN: ui_Step3
+void ui_Step3_screen_init(void);
+extern lv_obj_t * ui_Step3;
+extern lv_obj_t * ui_TopRowS4;
+extern lv_obj_t * ui_Circle1S4;
+extern lv_obj_t * ui_Circle1TextS4;
+extern lv_obj_t * ui_Divider1S4;
+extern lv_obj_t * ui_Circle2S4;
+extern lv_obj_t * ui_Circle2TextS4;
+extern lv_obj_t * ui_Divider2S4;
+extern lv_obj_t * ui_Circle3S4;
+extern lv_obj_t * ui_Circle3TextS4;
 extern lv_obj_t * ui_Label3;
-// SCREEN: ui_Screen2
-void ui_Screen2_screen_init(void);
-extern lv_obj_t * ui_Screen2;
-extern lv_obj_t * ui_Spinner2;
+extern lv_obj_t * ui_BottomRowS3;
+extern lv_obj_t * ui_LeftColS3;
+extern lv_obj_t * ui_CenterColS3;
+extern lv_obj_t * ui_ScanIconS3;
+extern lv_obj_t * ui_ScanTextS3;
+extern lv_obj_t * ui_RightColS3;
+extern lv_obj_t * ui_InOutIconS3;
+extern lv_obj_t * ui_InOutTextS3;
 extern lv_obj_t * ui____initial_actions0;
 
+LV_IMG_DECLARE(ui_img_bg_arc_png);    // assets/bg_arc.png
 LV_IMG_DECLARE(ui_img_camera_solid_png);    // assets/camera_solid.png
 LV_IMG_DECLARE(ui_img_plus_solid_png);    // assets/plus_solid.png
 LV_IMG_DECLARE(ui_img_minus_solid_png);    // assets/minus_solid.png
+LV_IMG_DECLARE(ui_img_circle_solid_large_png);    // assets/circle_solid_large.png
 LV_IMG_DECLARE(ui_img_circle_solid_png);    // assets/circle_solid.png
+LV_IMG_DECLARE(ui_img_circle_solid_red_png);    // assets/circle_solid_red.png
+LV_IMG_DECLARE(ui_img_circle_solid_green_png);    // assets/circle_solid_green.png
+LV_IMG_DECLARE(ui_img_redo_alt_solid_png);    // assets/redo_alt_solid.png
+LV_IMG_DECLARE(ui_img_trash_alt_solid_png);    // assets/trash_alt_solid.png
 
 
 
