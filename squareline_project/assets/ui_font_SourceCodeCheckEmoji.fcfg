@@ -1,0 +1,16 @@
+{
+  "codename": "SourceCodeCheckEmoji",
+  "ttf_path": "/assets/SourceCodePro-Regular.ttf",
+  "bin_path": "/assets\\ui_font_SourceCodeCheckEmoji.bin",
+  "c_path": "/assets\\ui_font_SourceCodeCheckEmoji.c",
+  "cfg_path": "/assets\\ui_font_SourceCodeCheckEmoji.fcfg",
+  "size": 14,
+  "bpp": 1,
+  "letters": 0,
+  "ranges": [
+    "0x2713"
+  ],
+  "symbols": "",
+  "customparams": "--no-compress --no-prefilter",
+  "uploaded": false
+}

@@ -6208,7 +6208,7 @@
                       {
                         "nid": -2011581492,
                         "strtype": "LABEL/Text",
-                        "strval": "1",
+                        "strval": "✔",
                         "InheritedType": 10
                       },
                       {
@@ -6240,6 +6240,12 @@
                                 "nid": 2145435457,
                                 "strtype": "_style/Text_Align",
                                 "strval": "CENTER",
+                                "InheritedType": 3
+                              },
+                              {
+                                "nid": 2023559061,
+                                "strtype": "_style/Text_Font",
+                                "strval": "NotoCheckEmoji",
                                 "InheritedType": 3
                               }
                             ],
@@ -18766,7 +18772,7 @@
     "theme_color2": 0,
     "uiExportFolderPath": "/home/timo/print-store-hardware/display/src/ui",
     "projectExportFolderPath": "",
-    "backup_cnt": 144,
+    "backup_cnt": 152,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.11",
     "callfuncsexport": "CPP_FILE",
