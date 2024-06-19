@@ -14,6 +14,9 @@ SET(SOURCES ui_Step1.c
     ui_img_circle_solid_red_png.c
     ui_img_circle_solid_green_png.c
     ui_img_redo_alt_solid_png.c
-    ui_img_trash_alt_solid_png.c)
+    ui_img_trash_alt_solid_png.c
+    ui_img_ruler_horizontal_solid_png.c
+    ui_img_palette_solid_png.c
+    ui_img_shapes_solid_png.c)
 
 add_library(ui ${SOURCES})

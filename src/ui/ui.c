@@ -73,6 +73,16 @@ lv_obj_t * ui_ScanTextS3;
 lv_obj_t * ui_RightColS3;
 lv_obj_t * ui_InOutIconS3;
 lv_obj_t * ui_InOutTextS3;
+lv_obj_t * ui_Container1;
+lv_obj_t * ui_Container3;
+lv_obj_t * ui_Image1;
+lv_obj_t * ui_Label2;
+lv_obj_t * ui_Container4;
+lv_obj_t * ui_Image3;
+lv_obj_t * ui_Label4;
+lv_obj_t * ui_Container5;
+lv_obj_t * ui_Image4;
+lv_obj_t * ui_Label6;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////

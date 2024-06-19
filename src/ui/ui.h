@@ -85,6 +85,16 @@ extern lv_obj_t * ui_ScanTextS3;
 extern lv_obj_t * ui_RightColS3;
 extern lv_obj_t * ui_InOutIconS3;
 extern lv_obj_t * ui_InOutTextS3;
+extern lv_obj_t * ui_Container1;
+extern lv_obj_t * ui_Container3;
+extern lv_obj_t * ui_Image1;
+extern lv_obj_t * ui_Label2;
+extern lv_obj_t * ui_Container4;
+extern lv_obj_t * ui_Image3;
+extern lv_obj_t * ui_Label4;
+extern lv_obj_t * ui_Container5;
+extern lv_obj_t * ui_Image4;
+extern lv_obj_t * ui_Label6;
 extern lv_obj_t * ui____initial_actions0;
 
 LV_IMG_DECLARE(ui_img_bg_arc_png);    // assets/bg_arc.png
@@ -97,6 +107,9 @@ LV_IMG_DECLARE(ui_img_circle_solid_red_png);    // assets/circle_solid_red.png
 LV_IMG_DECLARE(ui_img_circle_solid_green_png);    // assets/circle_solid_green.png
 LV_IMG_DECLARE(ui_img_redo_alt_solid_png);    // assets/redo_alt_solid.png
 LV_IMG_DECLARE(ui_img_trash_alt_solid_png);    // assets/trash_alt_solid.png
+LV_IMG_DECLARE(ui_img_ruler_horizontal_solid_png);    // assets/ruler_horizontal_solid.png
+LV_IMG_DECLARE(ui_img_palette_solid_png);    // assets/palette_solid.png
+LV_IMG_DECLARE(ui_img_shapes_solid_png);    // assets/shapes_solid.png
 
 
 
