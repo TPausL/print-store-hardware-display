@@ -32,6 +32,8 @@ void ui_Step1_screen_init(void);
 extern lv_obj_t * ui_Step1;
 extern lv_obj_t * ui_BottomRowS1;
 extern lv_obj_t * ui_LeftColS1;
+extern lv_obj_t * ui_InOutIconS2;
+extern lv_obj_t * ui_InOutTextS2;
 extern lv_obj_t * ui_CenterColS1;
 extern lv_obj_t * ui_ScanIconS1;
 extern lv_obj_t * ui_ScanTextS1;
@@ -49,6 +51,14 @@ extern lv_obj_t * ui_Divider2S1;
 extern lv_obj_t * ui_Circle3S1;
 extern lv_obj_t * ui_Circle3TextS1;
 extern lv_obj_t * ui_Image2;
+extern lv_obj_t * ui_Bar1;
+extern lv_obj_t * ui_StatusBarS1;
+extern lv_obj_t * ui_WifiIndicatorS1;
+extern lv_obj_t * ui_BatteryIndicatorS1;
+extern lv_obj_t * ui_Image5;
+extern lv_obj_t * ui_Image6;
+extern lv_obj_t * ui_Image7;
+extern lv_obj_t * ui_Image8;
 // SCREEN: ui_Step2
 void ui_Step2_screen_init(void);
 extern lv_obj_t * ui_Step2;
@@ -64,6 +74,9 @@ extern lv_obj_t * ui_Circle3TextS3;
 extern lv_obj_t * ui_Container2;
 extern lv_obj_t * ui_Spinner3;
 extern lv_obj_t * ui_Label1;
+extern lv_obj_t * ui_StatusBarS3;
+extern lv_obj_t * ui_WifiIndicatorS3;
+extern lv_obj_t * ui_BatteryIndicatorS3;
 // SCREEN: ui_Step3
 void ui_Step3_screen_init(void);
 extern lv_obj_t * ui_Step3;
@@ -76,7 +89,6 @@ extern lv_obj_t * ui_Circle2TextS4;
 extern lv_obj_t * ui_Divider2S4;
 extern lv_obj_t * ui_Circle3S4;
 extern lv_obj_t * ui_Circle3TextS4;
-extern lv_obj_t * ui_Label3;
 extern lv_obj_t * ui_BottomRowS3;
 extern lv_obj_t * ui_LeftColS3;
 extern lv_obj_t * ui_CenterColS3;
@@ -95,23 +107,88 @@ extern lv_obj_t * ui_Label4;
 extern lv_obj_t * ui_Container5;
 extern lv_obj_t * ui_Image4;
 extern lv_obj_t * ui_Label6;
+extern lv_obj_t * ui_StatusBarS4;
+extern lv_obj_t * ui_WifiIndicatorS4;
+extern lv_obj_t * ui_BatteryIndicatorS4;
+// SCREEN: ui_Startup
+void ui_Startup_screen_init(void);
+extern lv_obj_t * ui_Startup;
+extern lv_obj_t * ui_Spinner1;
+extern lv_obj_t * ui_Label3;
+// SCREEN: ui_Step4
+void ui_Step4_screen_init(void);
+extern lv_obj_t * ui_Step4;
+extern lv_obj_t * ui_TopRowS2;
+extern lv_obj_t * ui_Circle1S2;
+extern lv_obj_t * ui_Circle1TextS2;
+extern lv_obj_t * ui_Divider1S2;
+extern lv_obj_t * ui_Circle2S2;
+extern lv_obj_t * ui_Circle2TextS2;
+extern lv_obj_t * ui_Divider2S2;
+extern lv_obj_t * ui_Circle3S2;
+extern lv_obj_t * ui_Circle3TextS2;
+extern lv_obj_t * ui_Container6;
+extern lv_obj_t * ui_Spinner2;
+extern lv_obj_t * ui_Label5;
+extern lv_obj_t * ui_StatusBarS2;
+extern lv_obj_t * ui_WifiIndicatorS2;
+extern lv_obj_t * ui_BatteryIndicatorS2;
+// SCREEN: ui_Step5
+void ui_Step5_screen_init(void);
+extern lv_obj_t * ui_Step5;
+extern lv_obj_t * ui_TopRowS5;
+extern lv_obj_t * ui_Circle1S5;
+extern lv_obj_t * ui_Circle1TextS5;
+extern lv_obj_t * ui_Divider1S5;
+extern lv_obj_t * ui_Circle2S5;
+extern lv_obj_t * ui_Circle2TextS5;
+extern lv_obj_t * ui_Divider2S5;
+extern lv_obj_t * ui_Circle3S5;
+extern lv_obj_t * ui_Circle3TextS5;
+extern lv_obj_t * ui_BottomRowS2;
+extern lv_obj_t * ui_LeftColS2;
+extern lv_obj_t * ui_CenterColS2;
+extern lv_obj_t * ui_ScanIconS2;
+extern lv_obj_t * ui_ScanTextS2;
+extern lv_obj_t * ui_RightColS2;
+extern lv_obj_t * ui_InOutIconS4;
+extern lv_obj_t * ui_InOutTextS4;
+extern lv_obj_t * ui_Container7;
+extern lv_obj_t * ui_Label7;
+extern lv_obj_t * ui_ColorIndicator;
+extern lv_obj_t * ui_StatusBarS5;
+extern lv_obj_t * ui_WifiIndicatorS5;
+extern lv_obj_t * ui_BatteryIndicatorS5;
 extern lv_obj_t * ui____initial_actions0;
 
 LV_IMG_DECLARE(ui_img_bg_arc_png);    // assets/bg_arc.png
+LV_IMG_DECLARE(ui_img_swatchbook_solid_png);    // assets/swatchbook_solid.png
 LV_IMG_DECLARE(ui_img_camera_solid_png);    // assets/camera_solid.png
 LV_IMG_DECLARE(ui_img_plus_solid_png);    // assets/plus_solid.png
 LV_IMG_DECLARE(ui_img_minus_solid_png);    // assets/minus_solid.png
 LV_IMG_DECLARE(ui_img_circle_solid_large_png);    // assets/circle_solid_large.png
 LV_IMG_DECLARE(ui_img_circle_solid_png);    // assets/circle_solid.png
 LV_IMG_DECLARE(ui_img_circle_solid_red_png);    // assets/circle_solid_red.png
+LV_IMG_DECLARE(ui_img_wifi_solid_png);    // assets/wifi_solid.png
+LV_IMG_DECLARE(ui_img_battery_full_solid_png);    // assets/battery_full_solid.png
+LV_IMG_DECLARE(ui_img_battery_half_solid_png);    // assets/battery_half_solid.png
+LV_IMG_DECLARE(ui_img_battery_three_quarters_solid_png);    // assets/battery_three_quarters_solid.png
+LV_IMG_DECLARE(ui_img_battery_quarter_solid_png);    // assets/battery_quarter_solid.png
+LV_IMG_DECLARE(ui_img_battery_empty_solid_png);    // assets/battery_empty_solid.png
 LV_IMG_DECLARE(ui_img_circle_solid_green_png);    // assets/circle_solid_green.png
 LV_IMG_DECLARE(ui_img_redo_alt_solid_png);    // assets/redo_alt_solid.png
 LV_IMG_DECLARE(ui_img_trash_alt_solid_png);    // assets/trash_alt_solid.png
 LV_IMG_DECLARE(ui_img_ruler_horizontal_solid_png);    // assets/ruler_horizontal_solid.png
 LV_IMG_DECLARE(ui_img_palette_solid_png);    // assets/palette_solid.png
 LV_IMG_DECLARE(ui_img_shapes_solid_png);    // assets/shapes_solid.png
+LV_IMG_DECLARE(ui_img_home_solid_png);    // assets/home_solid.png
 
 
+LV_FONT_DECLARE(ui_font_NotoCheckEmoji);
+LV_FONT_DECLARE(ui_font_Poppins14);
+LV_FONT_DECLARE(ui_font_Poppins16);
+LV_FONT_DECLARE(ui_font_Poppins18);
+LV_FONT_DECLARE(ui_font_SourceCodeCheckEmoji);
 
 
 void ui_init(void);

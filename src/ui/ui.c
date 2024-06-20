@@ -16,6 +16,8 @@ void ui_Step1_screen_init(void);
 lv_obj_t * ui_Step1;
 lv_obj_t * ui_BottomRowS1;
 lv_obj_t * ui_LeftColS1;
+lv_obj_t * ui_InOutIconS2;
+lv_obj_t * ui_InOutTextS2;
 lv_obj_t * ui_CenterColS1;
 lv_obj_t * ui_ScanIconS1;
 lv_obj_t * ui_ScanTextS1;
@@ -33,6 +35,14 @@ lv_obj_t * ui_Divider2S1;
 lv_obj_t * ui_Circle3S1;
 lv_obj_t * ui_Circle3TextS1;
 lv_obj_t * ui_Image2;
+lv_obj_t * ui_Bar1;
+lv_obj_t * ui_StatusBarS1;
+lv_obj_t * ui_WifiIndicatorS1;
+lv_obj_t * ui_BatteryIndicatorS1;
+lv_obj_t * ui_Image5;
+lv_obj_t * ui_Image6;
+lv_obj_t * ui_Image7;
+lv_obj_t * ui_Image8;
 
 
 // SCREEN: ui_Step2
@@ -50,6 +60,9 @@ lv_obj_t * ui_Circle3TextS3;
 lv_obj_t * ui_Container2;
 lv_obj_t * ui_Spinner3;
 lv_obj_t * ui_Label1;
+lv_obj_t * ui_StatusBarS3;
+lv_obj_t * ui_WifiIndicatorS3;
+lv_obj_t * ui_BatteryIndicatorS3;
 
 
 // SCREEN: ui_Step3
@@ -64,7 +77,6 @@ lv_obj_t * ui_Circle2TextS4;
 lv_obj_t * ui_Divider2S4;
 lv_obj_t * ui_Circle3S4;
 lv_obj_t * ui_Circle3TextS4;
-lv_obj_t * ui_Label3;
 lv_obj_t * ui_BottomRowS3;
 lv_obj_t * ui_LeftColS3;
 lv_obj_t * ui_CenterColS3;
@@ -83,6 +95,64 @@ lv_obj_t * ui_Label4;
 lv_obj_t * ui_Container5;
 lv_obj_t * ui_Image4;
 lv_obj_t * ui_Label6;
+lv_obj_t * ui_StatusBarS4;
+lv_obj_t * ui_WifiIndicatorS4;
+lv_obj_t * ui_BatteryIndicatorS4;
+
+
+// SCREEN: ui_Startup
+void ui_Startup_screen_init(void);
+lv_obj_t * ui_Startup;
+lv_obj_t * ui_Spinner1;
+lv_obj_t * ui_Label3;
+
+
+// SCREEN: ui_Step4
+void ui_Step4_screen_init(void);
+lv_obj_t * ui_Step4;
+lv_obj_t * ui_TopRowS2;
+lv_obj_t * ui_Circle1S2;
+lv_obj_t * ui_Circle1TextS2;
+lv_obj_t * ui_Divider1S2;
+lv_obj_t * ui_Circle2S2;
+lv_obj_t * ui_Circle2TextS2;
+lv_obj_t * ui_Divider2S2;
+lv_obj_t * ui_Circle3S2;
+lv_obj_t * ui_Circle3TextS2;
+lv_obj_t * ui_Container6;
+lv_obj_t * ui_Spinner2;
+lv_obj_t * ui_Label5;
+lv_obj_t * ui_StatusBarS2;
+lv_obj_t * ui_WifiIndicatorS2;
+lv_obj_t * ui_BatteryIndicatorS2;
+
+
+// SCREEN: ui_Step5
+void ui_Step5_screen_init(void);
+lv_obj_t * ui_Step5;
+lv_obj_t * ui_TopRowS5;
+lv_obj_t * ui_Circle1S5;
+lv_obj_t * ui_Circle1TextS5;
+lv_obj_t * ui_Divider1S5;
+lv_obj_t * ui_Circle2S5;
+lv_obj_t * ui_Circle2TextS5;
+lv_obj_t * ui_Divider2S5;
+lv_obj_t * ui_Circle3S5;
+lv_obj_t * ui_Circle3TextS5;
+lv_obj_t * ui_BottomRowS2;
+lv_obj_t * ui_LeftColS2;
+lv_obj_t * ui_CenterColS2;
+lv_obj_t * ui_ScanIconS2;
+lv_obj_t * ui_ScanTextS2;
+lv_obj_t * ui_RightColS2;
+lv_obj_t * ui_InOutIconS4;
+lv_obj_t * ui_InOutTextS4;
+lv_obj_t * ui_Container7;
+lv_obj_t * ui_Label7;
+lv_obj_t * ui_ColorIndicator;
+lv_obj_t * ui_StatusBarS5;
+lv_obj_t * ui_WifiIndicatorS5;
+lv_obj_t * ui_BatteryIndicatorS5;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -154,6 +224,9 @@ void ui_init(void)
     ui_Step1_screen_init();
     ui_Step2_screen_init();
     ui_Step3_screen_init();
+    ui_Startup_screen_init();
+    ui_Step4_screen_init();
+    ui_Step5_screen_init();
     ui____initial_actions0 = lv_obj_create(NULL);
     lv_disp_load_scr(ui_Step1);
 }

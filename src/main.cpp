@@ -5,6 +5,8 @@
 #include "lvgl.h"
 #include <Wire.h>
 #include <SPI.h>
+#include "StatusBar.h"
+#include <TaskScheduler.h>
 
 #define BTN_A GPIO_NUM_39
 #define BTN_B GPIO_NUM_38
@@ -19,31 +21,6 @@ static lv_disp_drv_t disp_drv;   // Descriptor of a display driver
 static lv_indev_drv_t indev_drv; // Descriptor of a touch driver
 
 M5Display *tft;
-
-static void ta_event_cb(lv_event_t *e);
-static lv_obj_t *kb;
-
-static void ta_event_cb(lv_event_t *e)
-{
-    lv_event_code_t code = lv_event_get_code(e);
-    lv_obj_t *ta = lv_event_get_target(e);
-    if (code == LV_EVENT_CLICKED || code == LV_EVENT_FOCUSED)
-    {
-        /*Focus on the clicked text area*/
-        if (kb != NULL)
-            lv_keyboard_set_textarea(kb, ta);
-    }
-
-    else if (code == LV_EVENT_READY)
-    {
-        LV_LOG_USER("Ready, current text: %s", lv_textarea_get_text(ta));
-    }
-}
-
-static void btnPowerOff_event(lv_event_t *event)
-{
-    M5.Power.powerOFF();
-}
 
 void tft_lv_initialization()
 {
@@ -86,16 +63,16 @@ void init_disp_driver()
     lv_disp_drv_register(&disp_drv);                  // Finally register the driver
     lv_disp_set_bg_color(NULL, lv_color_hex3(0x000)); // Set default background color to black
 }
+Scheduler scheduler;
 
-void uitest()
+void onWiFiConnected()
 {
-    lv_obj_t *btn1 = lv_btn_create(lv_scr_act());
-    lv_obj_t *label = lv_label_create(btn1);
-    lv_obj_align(btn1, LV_ALIGN_CENTER, 0, 0);
-    lv_label_set_text(label, "Power Off");
-    lv_obj_center(label);
-    lv_obj_add_event_cb(btn1, btnPowerOff_event, LV_EVENT_CLICKED, NULL);
+    Serial.println("Connected to WiFi");
+    lv_disp_load_scr(ui_Step1);
 }
+
+Task UpdateBatteryLevel(1000 * 30, TASK_FOREVER, &batteryTick, &scheduler, true);
+Task ConnectWiFi(TASK_IMMEDIATE, TASK_ONCE, &connectWiFi, &scheduler, false, NULL, &onWiFiConnected);
 
 static bool in = true;
 static bool prev_in = true;
@@ -134,13 +111,15 @@ void setup()
     pinMode(GPIO_NUM_38, INPUT);
     pinMode(GPIO_NUM_37, INPUT);
 
+    WiFi.setSleep(false);
     tft_lv_initialization();
     init_disp_driver();
     ui_init(); // The Squareline interface
     setCpuFrequencyMhz(240);
     attachInterrupt(digitalPinToInterrupt(BTN_C), swapInOut, RISING);
     attachInterrupt(digitalPinToInterrupt(BTN_A), changeScreen, RISING);
-    lv_disp_load_scr(ui_Step1);
+    lv_disp_load_scr(ui_Startup);
+    ConnectWiFi.enable();
 }
 
 void loop()
@@ -161,4 +140,5 @@ void loop()
     }
     M5.update();
     lv_task_handler();
+    scheduler.execute();
 }

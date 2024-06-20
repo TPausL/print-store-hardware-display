@@ -5,7 +5,10 @@
         "target/esp32.cfg"
     ],
     "files.associations": {
+        "*.json5": "json5",
         "lvgl.h": "c",
-        "ui.h": "c"
-    }
+        "ui.h": "c",
+        "statusbar.h": "c"
+    },
+    "r.lsp.promptToInstall": false
 }
