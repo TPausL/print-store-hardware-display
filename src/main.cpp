@@ -7,6 +7,7 @@
 #include <SPI.h>
 #include "StatusBar.h"
 #include <TaskScheduler.h>
+#include <HTTPClient.h>
 
 #define BTN_A GPIO_NUM_39
 #define BTN_B GPIO_NUM_38
@@ -103,8 +104,17 @@ void changeScreen()
     }
 }
 
+bool b_pressed = false;
+void receiveImage()
+{
+    b_pressed = true;
+}
+
 void setup()
 {
+    // Wire.begin();
+    // pinMode(SCL, OUTPUT);
+    Serial2.begin(115200);
 
     // WiFi.setSleep(false); // Behebt bug mit Button A
     pinMode(GPIO_NUM_39, INPUT);
@@ -118,12 +128,58 @@ void setup()
     setCpuFrequencyMhz(240);
     attachInterrupt(digitalPinToInterrupt(BTN_C), swapInOut, RISING);
     attachInterrupt(digitalPinToInterrupt(BTN_A), changeScreen, RISING);
+    attachInterrupt(digitalPinToInterrupt(BTN_B), receiveImage, RISING);
     lv_disp_load_scr(ui_Startup);
     ConnectWiFi.enable();
 }
 
+HTTPClient http;
+
+int receive_count = 0;
 void loop()
 {
+    if (b_pressed)
+    {
+        Serial.println("Gettings data");
+        Serial2.write(0x01);
+        String p1 = Serial2.readString();
+        uint16_t size = p1.toInt();
+        Serial.println(String(size));
+        if (size == -1)
+        {
+            Serial2.write(0x03);
+            Serial.println("No data received");
+            return;
+        }
+        else
+        {
+            Serial2.write(0x02);
+            u_int8_t *image = (u_int8_t *)malloc(sizeof(u_int8_t[size]));
+            Serial2.readBytes(image, size);
+            /*  for (int i = 0; i < size; i++)
+             {
+                 Serial.print(image[i]);
+             } */
+            bool con = http.begin("http://192.168.188.93:5000/product");
+            Serial.println(con);
+            http.addHeader("Content-Type", "image/jpeg");
+            int err = http.GET();
+            Serial.println(err);
+            if (err > 0)
+            {
+                Serial.println(http.getString());
+            }
+            else
+            {
+                Serial.println(err);
+            }
+            // M5.Lcd.drawJpg(image, size);
+            Serial.println("Data received");
+            b_pressed = false;
+            free(image);
+        }
+        Serial.println(String(size));
+    }
     if (prev_in != in)
     {
         prev_in = in;
