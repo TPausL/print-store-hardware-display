@@ -57,3 +57,9 @@ void connectWiFi()
                          { request->send(404, "text/plain", "Not found"); });
     webServer.begin();
 }
+
+void onWiFiConnected()
+{
+    Serial.println("Connected to WiFi");
+    lv_disp_load_scr(ui_Step1);
+}
