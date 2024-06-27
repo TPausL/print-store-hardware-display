@@ -27,13 +27,13 @@ extern "C" {
 
 void ZoomCircleIn_Animation(lv_obj_t * TargetObject, int delay);
 void ZoomCircleOut_Animation(lv_obj_t * TargetObject, int delay);
-// SCREEN: ui_Step1
-void ui_Step1_screen_init(void);
-extern lv_obj_t * ui_Step1;
+// SCREEN: ui_Idle
+void ui_Idle_screen_init(void);
+extern lv_obj_t * ui_Idle;
 extern lv_obj_t * ui_BottomRowS1;
 extern lv_obj_t * ui_LeftColS1;
-extern lv_obj_t * ui_InOutIconS2;
-extern lv_obj_t * ui_InOutTextS2;
+extern lv_obj_t * ui_InOutIconS4;
+extern lv_obj_t * ui_InOutTextS4;
 extern lv_obj_t * ui_CenterColS1;
 extern lv_obj_t * ui_ScanIconS1;
 extern lv_obj_t * ui_ScanTextS1;
@@ -51,17 +51,16 @@ extern lv_obj_t * ui_Divider2S1;
 extern lv_obj_t * ui_Circle3S1;
 extern lv_obj_t * ui_Circle3TextS1;
 extern lv_obj_t * ui_Image2;
-extern lv_obj_t * ui_Bar1;
-extern lv_obj_t * ui_StatusBarS1;
-extern lv_obj_t * ui_WifiIndicatorS1;
-extern lv_obj_t * ui_BatteryIndicatorS1;
-extern lv_obj_t * ui_Image5;
+extern lv_obj_t * ui_Container6;
 extern lv_obj_t * ui_Image6;
-extern lv_obj_t * ui_Image7;
-extern lv_obj_t * ui_Image8;
-// SCREEN: ui_Step2
-void ui_Step2_screen_init(void);
-extern lv_obj_t * ui_Step2;
+extern lv_obj_t * ui_BatteryS1;
+extern lv_obj_t * ui_Image5;
+extern lv_obj_t * ui_Image9;
+extern lv_obj_t * ui_Image10;
+extern lv_obj_t * ui_Image11;
+// SCREEN: ui_Scanning
+void ui_Scanning_screen_init(void);
+extern lv_obj_t * ui_Scanning;
 extern lv_obj_t * ui_TopRowS3;
 extern lv_obj_t * ui_Circle1S3;
 extern lv_obj_t * ui_Circle1TextS3;
@@ -74,12 +73,12 @@ extern lv_obj_t * ui_Circle3TextS3;
 extern lv_obj_t * ui_Container2;
 extern lv_obj_t * ui_Spinner3;
 extern lv_obj_t * ui_Label1;
-extern lv_obj_t * ui_StatusBarS3;
-extern lv_obj_t * ui_WifiIndicatorS3;
-extern lv_obj_t * ui_BatteryIndicatorS3;
-// SCREEN: ui_Step3
-void ui_Step3_screen_init(void);
-extern lv_obj_t * ui_Step3;
+extern lv_obj_t * ui_Container8;
+extern lv_obj_t * ui_Image7;
+extern lv_obj_t * ui_BatteryS2;
+// SCREEN: ui_Result
+void ui_Result_screen_init(void);
+extern lv_obj_t * ui_Result;
 extern lv_obj_t * ui_TopRowS4;
 extern lv_obj_t * ui_Circle1S4;
 extern lv_obj_t * ui_Circle1TextS4;
@@ -89,6 +88,7 @@ extern lv_obj_t * ui_Circle2TextS4;
 extern lv_obj_t * ui_Divider2S4;
 extern lv_obj_t * ui_Circle3S4;
 extern lv_obj_t * ui_Circle3TextS4;
+extern lv_obj_t * ui_Label3;
 extern lv_obj_t * ui_BottomRowS3;
 extern lv_obj_t * ui_LeftColS3;
 extern lv_obj_t * ui_CenterColS3;
@@ -100,24 +100,25 @@ extern lv_obj_t * ui_InOutTextS3;
 extern lv_obj_t * ui_Container1;
 extern lv_obj_t * ui_Container3;
 extern lv_obj_t * ui_Image1;
-extern lv_obj_t * ui_Label2;
+extern lv_obj_t * ui_ResultSize;
 extern lv_obj_t * ui_Container4;
 extern lv_obj_t * ui_Image3;
-extern lv_obj_t * ui_Label4;
+extern lv_obj_t * ui_ResultCol;
 extern lv_obj_t * ui_Container5;
 extern lv_obj_t * ui_Image4;
-extern lv_obj_t * ui_Label6;
-extern lv_obj_t * ui_StatusBarS4;
-extern lv_obj_t * ui_WifiIndicatorS4;
-extern lv_obj_t * ui_BatteryIndicatorS4;
+extern lv_obj_t * ui_ResultShape;
+extern lv_obj_t * ui_Container9;
+extern lv_obj_t * ui_Image8;
+extern lv_obj_t * ui_BatteryS3;
 // SCREEN: ui_Startup
 void ui_Startup_screen_init(void);
 extern lv_obj_t * ui_Startup;
-extern lv_obj_t * ui_Spinner1;
-extern lv_obj_t * ui_Label3;
-// SCREEN: ui_Step4
-void ui_Step4_screen_init(void);
-extern lv_obj_t * ui_Step4;
+extern lv_obj_t * ui_Container7;
+extern lv_obj_t * ui_Label5;
+extern lv_obj_t * ui_Image12;
+// SCREEN: ui_ResultColor
+void ui_ResultColor_screen_init(void);
+extern lv_obj_t * ui_ResultColor;
 extern lv_obj_t * ui_TopRowS2;
 extern lv_obj_t * ui_Circle1S2;
 extern lv_obj_t * ui_Circle1TextS2;
@@ -127,15 +128,38 @@ extern lv_obj_t * ui_Circle2TextS2;
 extern lv_obj_t * ui_Divider2S2;
 extern lv_obj_t * ui_Circle3S2;
 extern lv_obj_t * ui_Circle3TextS2;
-extern lv_obj_t * ui_Container6;
-extern lv_obj_t * ui_Spinner2;
-extern lv_obj_t * ui_Label5;
-extern lv_obj_t * ui_StatusBarS2;
-extern lv_obj_t * ui_WifiIndicatorS2;
-extern lv_obj_t * ui_BatteryIndicatorS2;
-// SCREEN: ui_Step5
-void ui_Step5_screen_init(void);
-extern lv_obj_t * ui_Step5;
+extern lv_obj_t * ui_Label7;
+extern lv_obj_t * ui_BottomRowS2;
+extern lv_obj_t * ui_LeftColS2;
+extern lv_obj_t * ui_CenterColS2;
+extern lv_obj_t * ui_ScanIconS2;
+extern lv_obj_t * ui_ScanTextS2;
+extern lv_obj_t * ui_RightColS2;
+extern lv_obj_t * ui_InOutIconS2;
+extern lv_obj_t * ui_InOutTextS2;
+extern lv_obj_t * ui_Container10;
+extern lv_obj_t * ui_ResultColorBackground;
+extern lv_obj_t * ui_ResultColorText;
+extern lv_obj_t * ui_Container14;
+extern lv_obj_t * ui_Image16;
+extern lv_obj_t * ui_BatteryS4;
+// SCREEN: ui_Error
+void ui_Error_screen_init(void);
+extern lv_obj_t * ui_Error;
+extern lv_obj_t * ui_BottomRowS5;
+extern lv_obj_t * ui_LeftColS5;
+extern lv_obj_t * ui_CenterColS5;
+extern lv_obj_t * ui_ScanIconS5;
+extern lv_obj_t * ui_ScanTextS5;
+extern lv_obj_t * ui_RightColS5;
+extern lv_obj_t * ui_Label9;
+extern lv_obj_t * ui_Image13;
+extern lv_obj_t * ui_Container13;
+extern lv_obj_t * ui_Image17;
+extern lv_obj_t * ui_BatteryS7;
+// SCREEN: ui_ResultNotFound
+void ui_ResultNotFound_screen_init(void);
+extern lv_obj_t * ui_ResultNotFound;
 extern lv_obj_t * ui_TopRowS5;
 extern lv_obj_t * ui_Circle1S5;
 extern lv_obj_t * ui_Circle1TextS5;
@@ -145,20 +169,19 @@ extern lv_obj_t * ui_Circle2TextS5;
 extern lv_obj_t * ui_Divider2S5;
 extern lv_obj_t * ui_Circle3S5;
 extern lv_obj_t * ui_Circle3TextS5;
-extern lv_obj_t * ui_BottomRowS2;
-extern lv_obj_t * ui_LeftColS2;
-extern lv_obj_t * ui_CenterColS2;
-extern lv_obj_t * ui_ScanIconS2;
-extern lv_obj_t * ui_ScanTextS2;
-extern lv_obj_t * ui_RightColS2;
-extern lv_obj_t * ui_InOutIconS4;
-extern lv_obj_t * ui_InOutTextS4;
-extern lv_obj_t * ui_Container7;
-extern lv_obj_t * ui_Label7;
-extern lv_obj_t * ui_ColorIndicator;
-extern lv_obj_t * ui_StatusBarS5;
-extern lv_obj_t * ui_WifiIndicatorS5;
-extern lv_obj_t * ui_BatteryIndicatorS5;
+extern lv_obj_t * ui_Label10;
+extern lv_obj_t * ui_BottomRowS4;
+extern lv_obj_t * ui_LeftColS4;
+extern lv_obj_t * ui_CenterColS4;
+extern lv_obj_t * ui_ScanIconS4;
+extern lv_obj_t * ui_ScanTextS4;
+extern lv_obj_t * ui_RightColS4;
+extern lv_obj_t * ui_Container16;
+extern lv_obj_t * ui_Image18;
+extern lv_obj_t * ui_BatteryS5;
+extern lv_obj_t * ui_Container11;
+extern lv_obj_t * ui_Image14;
+extern lv_obj_t * ui_Label11;
 extern lv_obj_t * ui____initial_actions0;
 
 LV_IMG_DECLARE(ui_img_bg_arc_png);    // assets/bg_arc.png
@@ -170,18 +193,20 @@ LV_IMG_DECLARE(ui_img_circle_solid_large_png);    // assets/circle_solid_large.p
 LV_IMG_DECLARE(ui_img_circle_solid_png);    // assets/circle_solid.png
 LV_IMG_DECLARE(ui_img_circle_solid_red_png);    // assets/circle_solid_red.png
 LV_IMG_DECLARE(ui_img_wifi_solid_png);    // assets/wifi_solid.png
+LV_IMG_DECLARE(ui_img_battery_empty_solid_png);    // assets/battery_empty_solid.png
 LV_IMG_DECLARE(ui_img_battery_full_solid_png);    // assets/battery_full_solid.png
 LV_IMG_DECLARE(ui_img_battery_half_solid_png);    // assets/battery_half_solid.png
-LV_IMG_DECLARE(ui_img_battery_three_quarters_solid_png);    // assets/battery_three_quarters_solid.png
 LV_IMG_DECLARE(ui_img_battery_quarter_solid_png);    // assets/battery_quarter_solid.png
-LV_IMG_DECLARE(ui_img_battery_empty_solid_png);    // assets/battery_empty_solid.png
+LV_IMG_DECLARE(ui_img_battery_three_quarters_solid_png);    // assets/battery_three_quarters_solid.png
 LV_IMG_DECLARE(ui_img_circle_solid_green_png);    // assets/circle_solid_green.png
-LV_IMG_DECLARE(ui_img_redo_alt_solid_png);    // assets/redo_alt_solid.png
+LV_IMG_DECLARE(ui_img_home_solid_png);    // assets/home_solid.png
 LV_IMG_DECLARE(ui_img_trash_alt_solid_png);    // assets/trash_alt_solid.png
 LV_IMG_DECLARE(ui_img_ruler_horizontal_solid_png);    // assets/ruler_horizontal_solid.png
 LV_IMG_DECLARE(ui_img_palette_solid_png);    // assets/palette_solid.png
 LV_IMG_DECLARE(ui_img_shapes_solid_png);    // assets/shapes_solid.png
-LV_IMG_DECLARE(ui_img_home_solid_png);    // assets/home_solid.png
+LV_IMG_DECLARE(ui_img_hourglass_start_solid_png);    // assets/hourglass_start_solid.png
+LV_IMG_DECLARE(ui_img_exclamation_triangle_solid_png);    // assets/exclamation_triangle_solid.png
+LV_IMG_DECLARE(ui_img_tint_slash_solid_png);    // assets/tint_slash_solid.png
 
 
 LV_FONT_DECLARE(ui_font_NotoCheckEmoji);

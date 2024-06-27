@@ -1,9 +1,10 @@
-SET(SOURCES ui_Step1.c
-    ui_Step2.c
-    ui_Step3.c
+SET(SOURCES ui_Idle.c
+    ui_Scanning.c
+    ui_Result.c
     ui_Startup.c
-    ui_Step4.c
-    ui_Step5.c
+    ui_ResultColor.c
+    ui_Error.c
+    ui_ResultNotFound.c
     ui.c
     ui_comp_hook.c
     ui_helpers.c
@@ -17,18 +18,20 @@ SET(SOURCES ui_Step1.c
     ui_img_circle_solid_png.c
     ui_img_circle_solid_red_png.c
     ui_img_wifi_solid_png.c
+    ui_img_battery_empty_solid_png.c
     ui_img_battery_full_solid_png.c
     ui_img_battery_half_solid_png.c
-    ui_img_battery_three_quarters_solid_png.c
     ui_img_battery_quarter_solid_png.c
-    ui_img_battery_empty_solid_png.c
+    ui_img_battery_three_quarters_solid_png.c
     ui_img_circle_solid_green_png.c
-    ui_img_redo_alt_solid_png.c
+    ui_img_home_solid_png.c
     ui_img_trash_alt_solid_png.c
     ui_img_ruler_horizontal_solid_png.c
     ui_img_palette_solid_png.c
     ui_img_shapes_solid_png.c
-    ui_img_home_solid_png.c
+    ui_img_hourglass_start_solid_png.c
+    ui_img_exclamation_triangle_solid_png.c
+    ui_img_tint_slash_solid_png.c
     fonts/ui_font_NotoCheckEmoji.c
     fonts/ui_font_Poppins14.c
     fonts/ui_font_Poppins16.c

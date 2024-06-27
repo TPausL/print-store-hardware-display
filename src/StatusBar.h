@@ -9,6 +9,5 @@
 
 void connectWiFi();
 void batteryTick();
-void onWiFiConnected();
 
 #endif // STATUS_BAR_H

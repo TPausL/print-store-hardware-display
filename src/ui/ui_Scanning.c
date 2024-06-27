@@ -5,12 +5,12 @@
 
 #include "ui.h"
 
-void ui_Step2_screen_init(void)
+void ui_Scanning_screen_init(void)
 {
-    ui_Step2 = lv_obj_create(NULL);
-    lv_obj_clear_flag(ui_Step2, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    ui_Scanning = lv_obj_create(NULL);
+    lv_obj_clear_flag(ui_Scanning, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
-    ui_TopRowS3 = lv_obj_create(ui_Step2);
+    ui_TopRowS3 = lv_obj_create(ui_Scanning);
     lv_obj_remove_style_all(ui_TopRowS3);
     lv_obj_set_width(ui_TopRowS3, 320);
     lv_obj_set_height(ui_TopRowS3, 60);
@@ -49,13 +49,12 @@ void ui_Step2_screen_init(void)
     lv_obj_set_style_text_font(ui_Circle1TextS3, &ui_font_NotoCheckEmoji, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Divider1S3 = lv_obj_create(ui_TopRowS3);
-    lv_obj_set_width(ui_Divider1S3, 50);
+    lv_obj_set_width(ui_Divider1S3, 80);
     lv_obj_set_height(ui_Divider1S3, 7);
     lv_obj_set_x(ui_Divider1S3, -60);
     lv_obj_set_y(ui_Divider1S3, -92);
     lv_obj_set_align(ui_Divider1S3, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_Divider1S3, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-    lv_obj_set_style_border_width(ui_Divider1S3, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Circle2S3 = lv_img_create(ui_TopRowS3);
     lv_img_set_src(ui_Circle2S3, &ui_img_circle_solid_large_png);
@@ -81,13 +80,12 @@ void ui_Step2_screen_init(void)
     lv_obj_set_style_text_align(ui_Circle2TextS3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Divider2S3 = lv_obj_create(ui_TopRowS3);
-    lv_obj_set_width(ui_Divider2S3, 50);
+    lv_obj_set_width(ui_Divider2S3, 80);
     lv_obj_set_height(ui_Divider2S3, 7);
     lv_obj_set_x(ui_Divider2S3, -60);
     lv_obj_set_y(ui_Divider2S3, -92);
     lv_obj_set_align(ui_Divider2S3, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_Divider2S3, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-    lv_obj_set_style_border_width(ui_Divider2S3, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Circle3S3 = lv_img_create(ui_TopRowS3);
     lv_img_set_src(ui_Circle3S3, &ui_img_circle_solid_png);
@@ -113,12 +111,12 @@ void ui_Step2_screen_init(void)
     lv_obj_set_style_text_opa(ui_Circle3TextS3, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui_Circle3TextS3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_Container2 = lv_obj_create(ui_Step2);
+    ui_Container2 = lv_obj_create(ui_Scanning);
     lv_obj_remove_style_all(ui_Container2);
     lv_obj_set_width(ui_Container2, 320);
-    lv_obj_set_height(ui_Container2, 156);
+    lv_obj_set_height(ui_Container2, 170);
     lv_obj_set_x(ui_Container2, -1);
-    lv_obj_set_y(ui_Container2, 39);
+    lv_obj_set_y(ui_Container2, 30);
     lv_obj_set_align(ui_Container2, LV_ALIGN_CENTER);
     lv_obj_set_flex_flow(ui_Container2, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_flex_align(ui_Container2, LV_FLEX_ALIGN_SPACE_EVENLY, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
@@ -127,8 +125,6 @@ void ui_Step2_screen_init(void)
     ui_Spinner3 = lv_spinner_create(ui_Container2, 1000, 90);
     lv_obj_set_width(ui_Spinner3, 80);
     lv_obj_set_height(ui_Spinner3, 80);
-    lv_obj_set_x(ui_Spinner3, -4);
-    lv_obj_set_y(ui_Spinner3, 22);
     lv_obj_set_align(ui_Spinner3, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_Spinner3, LV_OBJ_FLAG_CLICKABLE);      /// Flags
 
@@ -146,39 +142,35 @@ void ui_Step2_screen_init(void)
     lv_label_set_text(ui_Label1, "Scan laueft...");
     lv_obj_set_style_text_font(ui_Label1, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_StatusBarS3 = lv_obj_create(ui_Step2);
-    lv_obj_remove_style_all(ui_StatusBarS3);
-    lv_obj_set_width(ui_StatusBarS3, 40);
-    lv_obj_set_height(ui_StatusBarS3, 20);
-    lv_obj_set_x(ui_StatusBarS3, 140);
-    lv_obj_set_y(ui_StatusBarS3, -110);
-    lv_obj_set_align(ui_StatusBarS3, LV_ALIGN_CENTER);
-    lv_obj_set_flex_flow(ui_StatusBarS3, LV_FLEX_FLOW_ROW);
-    lv_obj_set_flex_align(ui_StatusBarS3, LV_FLEX_ALIGN_SPACE_EVENLY, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
-    lv_obj_clear_flag(ui_StatusBarS3, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-    lv_obj_set_style_pad_left(ui_StatusBarS3, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui_StatusBarS3, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui_StatusBarS3, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_bottom(ui_StatusBarS3, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    ui_Container8 = lv_obj_create(ui_Scanning);
+    lv_obj_remove_style_all(ui_Container8);
+    lv_obj_set_width(ui_Container8, 28);
+    lv_obj_set_height(ui_Container8, 15);
+    lv_obj_set_x(ui_Container8, 142);
+    lv_obj_set_y(ui_Container8, -110);
+    lv_obj_set_align(ui_Container8, LV_ALIGN_CENTER);
+    lv_obj_set_flex_flow(ui_Container8, LV_FLEX_FLOW_ROW);
+    lv_obj_set_flex_align(ui_Container8, LV_FLEX_ALIGN_SPACE_BETWEEN, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
+    lv_obj_clear_flag(ui_Container8, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
-    ui_WifiIndicatorS3 = lv_img_create(ui_StatusBarS3);
-    lv_img_set_src(ui_WifiIndicatorS3, &ui_img_wifi_solid_png);
-    lv_obj_set_width(ui_WifiIndicatorS3, LV_SIZE_CONTENT);   /// 24
-    lv_obj_set_height(ui_WifiIndicatorS3, LV_SIZE_CONTENT);    /// 24
-    lv_obj_set_x(ui_WifiIndicatorS3, 130);
-    lv_obj_set_y(ui_WifiIndicatorS3, -110);
-    lv_obj_set_align(ui_WifiIndicatorS3, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_WifiIndicatorS3, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
-    lv_obj_clear_flag(ui_WifiIndicatorS3, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    ui_Image7 = lv_img_create(ui_Container8);
+    lv_img_set_src(ui_Image7, &ui_img_wifi_solid_png);
+    lv_obj_set_width(ui_Image7, LV_SIZE_CONTENT);   /// 12
+    lv_obj_set_height(ui_Image7, LV_SIZE_CONTENT);    /// 12
+    lv_obj_set_x(ui_Image7, 114);
+    lv_obj_set_y(ui_Image7, 1);
+    lv_obj_set_align(ui_Image7, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_Image7, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
+    lv_obj_clear_flag(ui_Image7, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
-    ui_BatteryIndicatorS3 = lv_img_create(ui_StatusBarS3);
-    lv_img_set_src(ui_BatteryIndicatorS3, &ui_img_battery_full_solid_png);
-    lv_obj_set_width(ui_BatteryIndicatorS3, LV_SIZE_CONTENT);   /// 24
-    lv_obj_set_height(ui_BatteryIndicatorS3, LV_SIZE_CONTENT);    /// 24
-    lv_obj_set_x(ui_BatteryIndicatorS3, 150);
-    lv_obj_set_y(ui_BatteryIndicatorS3, -110);
-    lv_obj_set_align(ui_BatteryIndicatorS3, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_BatteryIndicatorS3, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
-    lv_obj_clear_flag(ui_BatteryIndicatorS3, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    ui_BatteryS2 = lv_img_create(ui_Container8);
+    lv_img_set_src(ui_BatteryS2, &ui_img_battery_empty_solid_png);
+    lv_obj_set_width(ui_BatteryS2, LV_SIZE_CONTENT);   /// 12
+    lv_obj_set_height(ui_BatteryS2, LV_SIZE_CONTENT);    /// 12
+    lv_obj_set_x(ui_BatteryS2, 147);
+    lv_obj_set_y(ui_BatteryS2, -2);
+    lv_obj_set_align(ui_BatteryS2, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_BatteryS2, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
+    lv_obj_clear_flag(ui_BatteryS2, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
 }

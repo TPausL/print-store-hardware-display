@@ -11,13 +11,13 @@ void ZoomCircleIn_Animation(lv_obj_t * TargetObject, int delay);
 void ZoomCircleOut_Animation(lv_obj_t * TargetObject, int delay);
 
 
-// SCREEN: ui_Step1
-void ui_Step1_screen_init(void);
-lv_obj_t * ui_Step1;
+// SCREEN: ui_Idle
+void ui_Idle_screen_init(void);
+lv_obj_t * ui_Idle;
 lv_obj_t * ui_BottomRowS1;
 lv_obj_t * ui_LeftColS1;
-lv_obj_t * ui_InOutIconS2;
-lv_obj_t * ui_InOutTextS2;
+lv_obj_t * ui_InOutIconS4;
+lv_obj_t * ui_InOutTextS4;
 lv_obj_t * ui_CenterColS1;
 lv_obj_t * ui_ScanIconS1;
 lv_obj_t * ui_ScanTextS1;
@@ -35,19 +35,18 @@ lv_obj_t * ui_Divider2S1;
 lv_obj_t * ui_Circle3S1;
 lv_obj_t * ui_Circle3TextS1;
 lv_obj_t * ui_Image2;
-lv_obj_t * ui_Bar1;
-lv_obj_t * ui_StatusBarS1;
-lv_obj_t * ui_WifiIndicatorS1;
-lv_obj_t * ui_BatteryIndicatorS1;
-lv_obj_t * ui_Image5;
+lv_obj_t * ui_Container6;
 lv_obj_t * ui_Image6;
-lv_obj_t * ui_Image7;
-lv_obj_t * ui_Image8;
+lv_obj_t * ui_BatteryS1;
+lv_obj_t * ui_Image5;
+lv_obj_t * ui_Image9;
+lv_obj_t * ui_Image10;
+lv_obj_t * ui_Image11;
 
 
-// SCREEN: ui_Step2
-void ui_Step2_screen_init(void);
-lv_obj_t * ui_Step2;
+// SCREEN: ui_Scanning
+void ui_Scanning_screen_init(void);
+lv_obj_t * ui_Scanning;
 lv_obj_t * ui_TopRowS3;
 lv_obj_t * ui_Circle1S3;
 lv_obj_t * ui_Circle1TextS3;
@@ -60,14 +59,14 @@ lv_obj_t * ui_Circle3TextS3;
 lv_obj_t * ui_Container2;
 lv_obj_t * ui_Spinner3;
 lv_obj_t * ui_Label1;
-lv_obj_t * ui_StatusBarS3;
-lv_obj_t * ui_WifiIndicatorS3;
-lv_obj_t * ui_BatteryIndicatorS3;
+lv_obj_t * ui_Container8;
+lv_obj_t * ui_Image7;
+lv_obj_t * ui_BatteryS2;
 
 
-// SCREEN: ui_Step3
-void ui_Step3_screen_init(void);
-lv_obj_t * ui_Step3;
+// SCREEN: ui_Result
+void ui_Result_screen_init(void);
+lv_obj_t * ui_Result;
 lv_obj_t * ui_TopRowS4;
 lv_obj_t * ui_Circle1S4;
 lv_obj_t * ui_Circle1TextS4;
@@ -77,6 +76,7 @@ lv_obj_t * ui_Circle2TextS4;
 lv_obj_t * ui_Divider2S4;
 lv_obj_t * ui_Circle3S4;
 lv_obj_t * ui_Circle3TextS4;
+lv_obj_t * ui_Label3;
 lv_obj_t * ui_BottomRowS3;
 lv_obj_t * ui_LeftColS3;
 lv_obj_t * ui_CenterColS3;
@@ -88,28 +88,29 @@ lv_obj_t * ui_InOutTextS3;
 lv_obj_t * ui_Container1;
 lv_obj_t * ui_Container3;
 lv_obj_t * ui_Image1;
-lv_obj_t * ui_Label2;
+lv_obj_t * ui_ResultSize;
 lv_obj_t * ui_Container4;
 lv_obj_t * ui_Image3;
-lv_obj_t * ui_Label4;
+lv_obj_t * ui_ResultCol;
 lv_obj_t * ui_Container5;
 lv_obj_t * ui_Image4;
-lv_obj_t * ui_Label6;
-lv_obj_t * ui_StatusBarS4;
-lv_obj_t * ui_WifiIndicatorS4;
-lv_obj_t * ui_BatteryIndicatorS4;
+lv_obj_t * ui_ResultShape;
+lv_obj_t * ui_Container9;
+lv_obj_t * ui_Image8;
+lv_obj_t * ui_BatteryS3;
 
 
 // SCREEN: ui_Startup
 void ui_Startup_screen_init(void);
 lv_obj_t * ui_Startup;
-lv_obj_t * ui_Spinner1;
-lv_obj_t * ui_Label3;
+lv_obj_t * ui_Container7;
+lv_obj_t * ui_Label5;
+lv_obj_t * ui_Image12;
 
 
-// SCREEN: ui_Step4
-void ui_Step4_screen_init(void);
-lv_obj_t * ui_Step4;
+// SCREEN: ui_ResultColor
+void ui_ResultColor_screen_init(void);
+lv_obj_t * ui_ResultColor;
 lv_obj_t * ui_TopRowS2;
 lv_obj_t * ui_Circle1S2;
 lv_obj_t * ui_Circle1TextS2;
@@ -119,17 +120,42 @@ lv_obj_t * ui_Circle2TextS2;
 lv_obj_t * ui_Divider2S2;
 lv_obj_t * ui_Circle3S2;
 lv_obj_t * ui_Circle3TextS2;
-lv_obj_t * ui_Container6;
-lv_obj_t * ui_Spinner2;
-lv_obj_t * ui_Label5;
-lv_obj_t * ui_StatusBarS2;
-lv_obj_t * ui_WifiIndicatorS2;
-lv_obj_t * ui_BatteryIndicatorS2;
+lv_obj_t * ui_Label7;
+lv_obj_t * ui_BottomRowS2;
+lv_obj_t * ui_LeftColS2;
+lv_obj_t * ui_CenterColS2;
+lv_obj_t * ui_ScanIconS2;
+lv_obj_t * ui_ScanTextS2;
+lv_obj_t * ui_RightColS2;
+lv_obj_t * ui_InOutIconS2;
+lv_obj_t * ui_InOutTextS2;
+lv_obj_t * ui_Container10;
+lv_obj_t * ui_ResultColorBackground;
+lv_obj_t * ui_ResultColorText;
+lv_obj_t * ui_Container14;
+lv_obj_t * ui_Image16;
+lv_obj_t * ui_BatteryS4;
 
 
-// SCREEN: ui_Step5
-void ui_Step5_screen_init(void);
-lv_obj_t * ui_Step5;
+// SCREEN: ui_Error
+void ui_Error_screen_init(void);
+lv_obj_t * ui_Error;
+lv_obj_t * ui_BottomRowS5;
+lv_obj_t * ui_LeftColS5;
+lv_obj_t * ui_CenterColS5;
+lv_obj_t * ui_ScanIconS5;
+lv_obj_t * ui_ScanTextS5;
+lv_obj_t * ui_RightColS5;
+lv_obj_t * ui_Label9;
+lv_obj_t * ui_Image13;
+lv_obj_t * ui_Container13;
+lv_obj_t * ui_Image17;
+lv_obj_t * ui_BatteryS7;
+
+
+// SCREEN: ui_ResultNotFound
+void ui_ResultNotFound_screen_init(void);
+lv_obj_t * ui_ResultNotFound;
 lv_obj_t * ui_TopRowS5;
 lv_obj_t * ui_Circle1S5;
 lv_obj_t * ui_Circle1TextS5;
@@ -139,20 +165,19 @@ lv_obj_t * ui_Circle2TextS5;
 lv_obj_t * ui_Divider2S5;
 lv_obj_t * ui_Circle3S5;
 lv_obj_t * ui_Circle3TextS5;
-lv_obj_t * ui_BottomRowS2;
-lv_obj_t * ui_LeftColS2;
-lv_obj_t * ui_CenterColS2;
-lv_obj_t * ui_ScanIconS2;
-lv_obj_t * ui_ScanTextS2;
-lv_obj_t * ui_RightColS2;
-lv_obj_t * ui_InOutIconS4;
-lv_obj_t * ui_InOutTextS4;
-lv_obj_t * ui_Container7;
-lv_obj_t * ui_Label7;
-lv_obj_t * ui_ColorIndicator;
-lv_obj_t * ui_StatusBarS5;
-lv_obj_t * ui_WifiIndicatorS5;
-lv_obj_t * ui_BatteryIndicatorS5;
+lv_obj_t * ui_Label10;
+lv_obj_t * ui_BottomRowS4;
+lv_obj_t * ui_LeftColS4;
+lv_obj_t * ui_CenterColS4;
+lv_obj_t * ui_ScanIconS4;
+lv_obj_t * ui_ScanTextS4;
+lv_obj_t * ui_RightColS4;
+lv_obj_t * ui_Container16;
+lv_obj_t * ui_Image18;
+lv_obj_t * ui_BatteryS5;
+lv_obj_t * ui_Container11;
+lv_obj_t * ui_Image14;
+lv_obj_t * ui_Label11;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -221,12 +246,13 @@ void ui_init(void)
     lv_theme_t * theme = lv_theme_default_init(dispp, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED),
                                                true, LV_FONT_DEFAULT);
     lv_disp_set_theme(dispp, theme);
-    ui_Step1_screen_init();
-    ui_Step2_screen_init();
-    ui_Step3_screen_init();
+    ui_Idle_screen_init();
+    ui_Scanning_screen_init();
+    ui_Result_screen_init();
     ui_Startup_screen_init();
-    ui_Step4_screen_init();
-    ui_Step5_screen_init();
+    ui_ResultColor_screen_init();
+    ui_Error_screen_init();
+    ui_ResultNotFound_screen_init();
     ui____initial_actions0 = lv_obj_create(NULL);
-    lv_disp_load_scr(ui_Step1);
+    lv_disp_load_scr(ui_Idle);
 }
