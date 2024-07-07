@@ -13,6 +13,7 @@
 #include "main.h"
 #include "WiFi.h"
 #include <ArduinoJson.h>
+#include "secrets.h"
 
 #define BTN_A_PIN GPIO_NUM_39
 #define BTN_B_PIN GPIO_NUM_38
@@ -69,7 +70,7 @@ void afterImageRequest()
 
 void scanImage()
 {
-    bool con = http.begin("http://192.168.178.96:5000/product");
+    bool con = http.begin(SCAN_SERVER_BASE_URL + String("/product"));
     Serial.println(con);
 
     http.addHeader("Content-Type", "image/jpeg");
@@ -117,7 +118,7 @@ void scanImage()
 
 void addColor()
 {
-    bool con = http.begin("http://192.168.178.96:5000/color");
+    bool con = http.begin(SCAN_SERVER_BASE_URL + String("/color"));
     Serial.println(con);
 
     http.addHeader("Content-Type", "image/jpeg");
@@ -138,7 +139,6 @@ void addColor()
             uint32_t hex_int = (uint32_t)strtol(hex.substring(1).c_str(), NULL, 16);
             lv_label_set_text(ui_ResultColorText, hex.c_str());
             static lv_style_t panelStyle;
-            // lv_style_set_bg_color(&panelStyle, lv_color_hex(response["data"]["hex"]), );
             lv_obj_set_style_bg_color(ui_ResultColorBackground, lv_color_hex(hex_int), LV_STATE_DEFAULT);
             lv_disp_load_scr(ui_ResultColor);
             free(image);
@@ -154,7 +154,6 @@ void addColor()
     err:
         lv_disp_load_scr(ui_Error);
         Serial.println("Error sending image data to server");
-        // error sreen?
     }
     free(image);
 }
@@ -196,12 +195,16 @@ void cbWifiEvent(WiFiEvent_t event, WiFiEventInfo_t info)
     {
         lv_disp_load_scr(ui_Idle);
     }
+    if (event == WiFiEvent_t::ARDUINO_EVENT_WIFI_STA_DISCONNECTED)
+    {
+        tReqImage.setOnDisable(nullptr);
+        tReqImage.disable();
+        lv_disp_load_scr(ui_Startup);
+    }
 }
 
 void setup()
 {
-    // Wire.begin();
-    // pinMode(SCL, OUTPUT);
     Serial2.begin(115200);
     pinMode(GPIO_NUM_39, INPUT);
     pinMode(GPIO_NUM_38, INPUT);
@@ -239,12 +242,6 @@ void loop()
 {
     scheduler.execute();
 }
-
-void handleColorAdd()
-{
-    lv_disp_load_scr(ui_Scanning);
-}
-
 // currently unused as multipart sending does not work
 void handleInOut()
 {

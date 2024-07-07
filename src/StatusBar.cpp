@@ -3,10 +3,13 @@
 
 int lastBatteryLevel = 0;
 
-lv_obj_t **batteryIndicators[5] = {
+lv_obj_t **batteryIndicators[6] = {
     &ui_BatteryS1,
     &ui_BatteryS2,
     &ui_BatteryS3,
+    &ui_BatteryS4,
+    &ui_BatteryS5,
+    &ui_BatteryS7,
 };
 
 void batteryTick()
@@ -19,20 +22,20 @@ void batteryTick()
         switch (batteryLevel)
         {
         case 100:
-            changeIcons(batteryIndicators, 3, &ui_img_battery_full_solid_png);
+            changeIcons(batteryIndicators, 6, &ui_img_battery_full_solid_png);
             break;
         case 75:
-            changeIcons(batteryIndicators, 3, &ui_img_battery_three_quarters_solid_png);
+            changeIcons(batteryIndicators, 6, &ui_img_battery_three_quarters_solid_png);
             break;
         case 50:
-            changeIcons(batteryIndicators, 3, &ui_img_battery_half_solid_png);
+            changeIcons(batteryIndicators, 6, &ui_img_battery_half_solid_png);
             break;
         case 25:
-            changeIcons(batteryIndicators, 3, &ui_img_battery_quarter_solid_png);
+            changeIcons(batteryIndicators, 6, &ui_img_battery_quarter_solid_png);
 
             break;
         default:
-            changeIcons(batteryIndicators, 3, &ui_img_battery_empty_solid_png);
+            changeIcons(batteryIndicators, 6, &ui_img_battery_empty_solid_png);
             break;
         }
     }
