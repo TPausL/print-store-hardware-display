@@ -88,7 +88,7 @@ extern lv_obj_t * ui_Circle2TextS4;
 extern lv_obj_t * ui_Divider2S4;
 extern lv_obj_t * ui_Circle3S4;
 extern lv_obj_t * ui_Circle3TextS4;
-extern lv_obj_t * ui_Label3;
+extern lv_obj_t * ui_ResultHeadlineProd;
 extern lv_obj_t * ui_BottomRowS3;
 extern lv_obj_t * ui_LeftColS3;
 extern lv_obj_t * ui_CenterColS3;
@@ -128,7 +128,7 @@ extern lv_obj_t * ui_Circle2TextS2;
 extern lv_obj_t * ui_Divider2S2;
 extern lv_obj_t * ui_Circle3S2;
 extern lv_obj_t * ui_Circle3TextS2;
-extern lv_obj_t * ui_Label7;
+extern lv_obj_t * ui_ResultHeadlineColor;
 extern lv_obj_t * ui_BottomRowS2;
 extern lv_obj_t * ui_LeftColS2;
 extern lv_obj_t * ui_CenterColS2;
@@ -152,7 +152,7 @@ extern lv_obj_t * ui_CenterColS5;
 extern lv_obj_t * ui_ScanIconS5;
 extern lv_obj_t * ui_ScanTextS5;
 extern lv_obj_t * ui_RightColS5;
-extern lv_obj_t * ui_Label9;
+extern lv_obj_t * ui_ErrorText;
 extern lv_obj_t * ui_Image13;
 extern lv_obj_t * ui_Container13;
 extern lv_obj_t * ui_Image17;
@@ -184,6 +184,7 @@ extern lv_obj_t * ui_Image14;
 extern lv_obj_t * ui_Label11;
 extern lv_obj_t * ui____initial_actions0;
 
+
 LV_IMG_DECLARE(ui_img_bg_arc_png);    // assets/bg_arc.png
 LV_IMG_DECLARE(ui_img_swatchbook_solid_png);    // assets/swatchbook_solid.png
 LV_IMG_DECLARE(ui_img_camera_solid_png);    // assets/camera_solid.png
@@ -209,11 +210,13 @@ LV_IMG_DECLARE(ui_img_exclamation_triangle_solid_png);    // assets/exclamation_
 LV_IMG_DECLARE(ui_img_tint_slash_solid_png);    // assets/tint_slash_solid.png
 
 
+
 LV_FONT_DECLARE(ui_font_NotoCheckEmoji);
 LV_FONT_DECLARE(ui_font_Poppins14);
 LV_FONT_DECLARE(ui_font_Poppins16);
 LV_FONT_DECLARE(ui_font_Poppins18);
 LV_FONT_DECLARE(ui_font_SourceCodeCheckEmoji);
+
 
 
 void ui_init(void);

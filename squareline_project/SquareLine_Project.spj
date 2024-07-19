@@ -16074,7 +16074,7 @@
               {
                 "nid": -1963052988,
                 "strtype": "OBJECT/Name",
-                "strval": "Label3",
+                "strval": "ResultHeadlineProd",
                 "InheritedType": 10
               },
               {
@@ -33042,7 +33042,7 @@
               {
                 "nid": 2045956485,
                 "strtype": "OBJECT/Name",
-                "strval": "Label9",
+                "strval": "ErrorText",
                 "InheritedType": 10
               },
               {
@@ -33350,7 +33350,8 @@
                 "InheritedType": 11
               }
             ],
-            "saved_objtypeKey": "LABEL"
+            "saved_objtypeKey": "LABEL",
+            "tree_closed": true
           },
           {
             "guid": "GUID37108798-347491S2203179",
@@ -41992,9 +41993,9 @@
     "theme_dark": true,
     "theme_color1": 5,
     "theme_color2": 0,
-    "uiExportFolderPath": "/home/timo/print-store-hardware/display/src/ui",
+    "uiExportFolderPath": "C:\\Users\\timoo\\print-store-hardware-display\\src\\ui",
     "projectExportFolderPath": "",
-    "backup_cnt": 198,
+    "backup_cnt": 201,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.11",
     "callfuncsexport": "CPP_FILE",

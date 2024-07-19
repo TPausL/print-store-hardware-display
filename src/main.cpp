@@ -42,6 +42,7 @@ void imageRequest()
     {
         Serial2.write(0x03);
         Serial.println("No size received");
+
         return;
     }
     else
@@ -71,6 +72,7 @@ void afterImageRequest()
 void scanImage()
 {
     bool con = http.begin(SCAN_SERVER_BASE_URL + String("/product"));
+    Serial.println(SCAN_SERVER_BASE_URL + String("/product"));
     Serial.println(con);
 
     http.addHeader("Content-Type", "image/jpeg");
@@ -103,13 +105,16 @@ void scanImage()
         }
         else
         {
-            goto err;
+            const char *error = response["message"];
+            lv_label_set_text(ui_ErrorText, error);
+            lv_disp_load_scr(ui_Error);
         }
     }
     else
     {
-    err:
+        lv_label_set_text(ui_ErrorText, "Fehler beim Senden des Bildes");
         lv_disp_load_scr(ui_Error);
+        free(image);
         Serial.println("Error sending image data to server");
         // error sreen?
     }
@@ -119,7 +124,12 @@ void scanImage()
 void addColor()
 {
     bool con = http.begin(SCAN_SERVER_BASE_URL + String("/color"));
-    Serial.println(con);
+    if (!con)
+    {
+        lv_label_set_text(ui_ErrorText, "Fehler beim Verbinden mit Server");
+        lv_disp_load_scr(ui_Error);
+        return;
+    }
 
     http.addHeader("Content-Type", "image/jpeg");
     int err = http.PUT(image, size);
@@ -129,8 +139,16 @@ void addColor()
         String strResponse = http.getString();
         Serial.println("Sucessfully sent image data to server");
         Serial.println(strResponse);
-        if (err == 201 || err == 304)
+        if (err == 201 || err == 200)
         {
+            if (err == 201)
+            {
+                lv_label_set_text(ui_ResultHeadlineColor, "Farbe hinzugefuegt");
+            }
+            else if (err == 200)
+            {
+                lv_label_set_text(ui_ResultHeadlineColor, "Farbe existiert bereits");
+            }
             JsonDocument response;
             deserializeJson(response, strResponse);
             const char *data_hex = response["data"]["hex"];
@@ -146,12 +164,16 @@ void addColor()
         }
         else
         {
-            goto err;
+            JsonDocument response;
+            deserializeJson(response, strResponse);
+            const char *error = response["message"];
+            lv_label_set_text(ui_ErrorText, error);
+            lv_disp_load_scr(ui_Error);
         }
     }
     else
     {
-    err:
+        lv_label_set_text(ui_ErrorText, "Fehler beim Senden des Bildes");
         lv_disp_load_scr(ui_Error);
         Serial.println("Error sending image data to server");
     }

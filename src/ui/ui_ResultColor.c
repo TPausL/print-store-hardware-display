@@ -108,15 +108,15 @@ void ui_ResultColor_screen_init(void)
     lv_obj_set_style_text_opa(ui_Circle3TextS2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui_Circle3TextS2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_Label7 = lv_label_create(ui_ResultColor);
-    lv_obj_set_width(ui_Label7, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Label7, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label7, 0);
-    lv_obj_set_y(ui_Label7, -43);
-    lv_obj_set_align(ui_Label7, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label7, "Ergebnis");
-    lv_obj_set_style_text_color(ui_Label7, lv_color_hex(0xCDCECD), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_Label7, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    ui_ResultHeadlineColor = lv_label_create(ui_ResultColor);
+    lv_obj_set_width(ui_ResultHeadlineColor, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_ResultHeadlineColor, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_ResultHeadlineColor, 0);
+    lv_obj_set_y(ui_ResultHeadlineColor, -43);
+    lv_obj_set_align(ui_ResultHeadlineColor, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_ResultHeadlineColor, "Ergebnis");
+    lv_obj_set_style_text_color(ui_ResultHeadlineColor, lv_color_hex(0xCDCECD), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui_ResultHeadlineColor, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_BottomRowS2 = lv_obj_create(ui_ResultColor);
     lv_obj_remove_style_all(ui_BottomRowS2);

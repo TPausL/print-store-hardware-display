@@ -76,14 +76,14 @@ void ui_Error_screen_init(void)
     lv_obj_set_flex_align(ui_RightColS5, LV_FLEX_ALIGN_END, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_clear_flag(ui_RightColS5, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
-    ui_Label9 = lv_label_create(ui_Error);
-    lv_obj_set_width(ui_Label9, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Label9, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_align(ui_Label9, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label9, "Es ist ein Fehler aufgetreten!");
-    lv_obj_set_style_text_color(ui_Label9, lv_color_hex(0xCDCECD), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_Label9, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_Label9, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    ui_ErrorText = lv_label_create(ui_Error);
+    lv_obj_set_width(ui_ErrorText, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_ErrorText, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_align(ui_ErrorText, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_ErrorText, "Es ist ein Fehler aufgetreten!");
+    lv_obj_set_style_text_color(ui_ErrorText, lv_color_hex(0xCDCECD), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui_ErrorText, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_ErrorText, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Image13 = lv_img_create(ui_Error);
     lv_img_set_src(ui_Image13, &ui_img_exclamation_triangle_solid_png);
