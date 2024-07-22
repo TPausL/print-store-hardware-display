@@ -23,7 +23,7 @@ HTTPClient http;
 Scheduler scheduler, displayScheduler;
 Task tConnectWifi(TASK_IMMEDIATE, TASK_ONCE, &connectWiFi, &scheduler, true);
 Task tBatteryLevel(1000 * 30, TASK_FOREVER, &batteryTick, &scheduler, true);
-Task tReqImage(500, TASK_ONCE, &imageRequest, &scheduler, false, &beforeImageRequest, &afterImageRequest);
+Task tReqImage(2000, TASK_ONCE, &imageRequest, &scheduler, false, &beforeImageRequest, &afterImageRequest);
 Task tUi(10, TASK_FOREVER, [](void)
          { lv_task_handler(); }, &displayScheduler, true);
 
@@ -257,6 +257,7 @@ void setup()
     // lv_task_handler();
     // connectWiFi();
     // tConnectWifi.enable();
+
     WiFi.onEvent(cbWifiEvent);
 }
 
