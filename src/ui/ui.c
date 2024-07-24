@@ -177,7 +177,7 @@ lv_obj_t * ui_Image18;
 lv_obj_t * ui_BatteryS5;
 lv_obj_t * ui_Container11;
 lv_obj_t * ui_Image14;
-lv_obj_t * ui_Label11;
+lv_obj_t * ui_ResultHeadlineNotFound;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////

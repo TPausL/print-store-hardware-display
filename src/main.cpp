@@ -99,6 +99,8 @@ void scanImage()
         }
         else if (err == 404)
         {
+            /* const char *error = response["message"];
+            lv_label_set_text(ui_ResultHeadlineNotFound, error); */
             lv_disp_load_scr(ui_ResultNotFound);
             free(image);
             return;

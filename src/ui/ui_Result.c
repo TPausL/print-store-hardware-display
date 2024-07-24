@@ -9,6 +9,7 @@ void ui_Result_screen_init(void)
 {
     ui_Result = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_Result, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_text_font(ui_Result, &ui_font_Poppins14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_TopRowS4 = lv_obj_create(ui_Result);
     lv_obj_remove_style_all(ui_TopRowS4);
@@ -171,7 +172,7 @@ void ui_Result_screen_init(void)
     lv_obj_set_y(ui_ScanTextS3, 12);
     lv_obj_set_align(ui_ScanTextS3, LV_ALIGN_CENTER);
     lv_label_set_text(ui_ScanTextS3, "Zurueck");
-    lv_obj_set_style_text_font(ui_ScanTextS3, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_ScanTextS3, &ui_font_Poppins20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_RightColS3 = lv_obj_create(ui_BottomRowS3);
     lv_obj_remove_style_all(ui_RightColS3);

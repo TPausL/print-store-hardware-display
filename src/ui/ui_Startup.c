@@ -26,7 +26,7 @@ void ui_Startup_screen_init(void)
     lv_label_set_text(ui_Label5, "WLAN wird verbunden...");
     lv_obj_set_style_text_color(ui_Label5, lv_color_hex(0xCDCDCD), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_Label5, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_Label5, &lv_font_montserrat_22, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_Label5, &ui_font_Poppins22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Image12 = lv_img_create(ui_Container7);
     lv_img_set_src(ui_Image12, &ui_img_hourglass_start_solid_png);

@@ -9,6 +9,7 @@ void ui_ResultNotFound_screen_init(void)
 {
     ui_ResultNotFound = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_ResultNotFound, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_text_font(ui_ResultNotFound, &ui_font_Poppins14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_TopRowS5 = lv_obj_create(ui_ResultNotFound);
     lv_obj_remove_style_all(ui_TopRowS5);
@@ -171,7 +172,7 @@ void ui_ResultNotFound_screen_init(void)
     lv_obj_set_y(ui_ScanTextS4, 12);
     lv_obj_set_align(ui_ScanTextS4, LV_ALIGN_CENTER);
     lv_label_set_text(ui_ScanTextS4, "Zurueck");
-    lv_obj_set_style_text_font(ui_ScanTextS4, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_ScanTextS4, &ui_font_Poppins20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_RightColS4 = lv_obj_create(ui_BottomRowS4);
     lv_obj_remove_style_all(ui_RightColS4);
@@ -234,14 +235,14 @@ void ui_ResultNotFound_screen_init(void)
     lv_obj_add_flag(ui_Image14, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
     lv_obj_clear_flag(ui_Image14, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
-    ui_Label11 = lv_label_create(ui_Container11);
-    lv_obj_set_width(ui_Label11, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Label11, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label11, 75);
-    lv_obj_set_y(ui_Label11, 6);
-    lv_obj_set_align(ui_Label11, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label11, "Die Farbe wurde nicht gefunden");
-    lv_obj_set_style_text_color(ui_Label11, lv_color_hex(0xCDCECD), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_Label11, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    ui_ResultHeadlineNotFound = lv_label_create(ui_Container11);
+    lv_obj_set_width(ui_ResultHeadlineNotFound, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_ResultHeadlineNotFound, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_ResultHeadlineNotFound, 75);
+    lv_obj_set_y(ui_ResultHeadlineNotFound, 6);
+    lv_obj_set_align(ui_ResultHeadlineNotFound, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_ResultHeadlineNotFound, "Die Farbe wurde nicht gefunden");
+    lv_obj_set_style_text_color(ui_ResultHeadlineNotFound, lv_color_hex(0xCDCECD), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui_ResultHeadlineNotFound, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
 }

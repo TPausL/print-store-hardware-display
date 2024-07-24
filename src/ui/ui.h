@@ -181,9 +181,8 @@ extern lv_obj_t * ui_Image18;
 extern lv_obj_t * ui_BatteryS5;
 extern lv_obj_t * ui_Container11;
 extern lv_obj_t * ui_Image14;
-extern lv_obj_t * ui_Label11;
+extern lv_obj_t * ui_ResultHeadlineNotFound;
 extern lv_obj_t * ui____initial_actions0;
-
 
 LV_IMG_DECLARE(ui_img_bg_arc_png);    // assets/bg_arc.png
 LV_IMG_DECLARE(ui_img_swatchbook_solid_png);    // assets/swatchbook_solid.png
@@ -210,13 +209,11 @@ LV_IMG_DECLARE(ui_img_exclamation_triangle_solid_png);    // assets/exclamation_
 LV_IMG_DECLARE(ui_img_tint_slash_solid_png);    // assets/tint_slash_solid.png
 
 
-
 LV_FONT_DECLARE(ui_font_NotoCheckEmoji);
 LV_FONT_DECLARE(ui_font_Poppins14);
-LV_FONT_DECLARE(ui_font_Poppins16);
-LV_FONT_DECLARE(ui_font_Poppins18);
+LV_FONT_DECLARE(ui_font_Poppins20);
+LV_FONT_DECLARE(ui_font_Poppins22);
 LV_FONT_DECLARE(ui_font_SourceCodeCheckEmoji);
-
 
 
 void ui_init(void);

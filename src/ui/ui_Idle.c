@@ -9,6 +9,7 @@ void ui_Idle_screen_init(void)
 {
     ui_Idle = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_Idle, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_text_font(ui_Idle, &ui_font_Poppins14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_BottomRowS1 = lv_obj_create(ui_Idle);
     lv_obj_remove_style_all(ui_BottomRowS1);
@@ -81,7 +82,7 @@ void ui_Idle_screen_init(void)
     lv_obj_set_y(ui_ScanTextS1, 12);
     lv_obj_set_align(ui_ScanTextS1, LV_ALIGN_CENTER);
     lv_label_set_text(ui_ScanTextS1, "Scanen");
-    lv_obj_set_style_text_font(ui_ScanTextS1, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_ScanTextS1, &ui_font_Poppins20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_RightColS1 = lv_obj_create(ui_BottomRowS1);
     lv_obj_remove_style_all(ui_RightColS1);
@@ -110,7 +111,7 @@ void ui_Idle_screen_init(void)
     lv_obj_set_x(ui_InOutTextS1, -5);
     lv_obj_set_y(ui_InOutTextS1, 12);
     lv_obj_set_align(ui_InOutTextS1, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_InOutTextS1, "Hinzufuegen");
+    lv_label_set_text(ui_InOutTextS1, "Hinzufügen");
 
     ui_MinusIconS1 = lv_img_create(ui_Idle);
     lv_img_set_src(ui_MinusIconS1, &ui_img_minus_solid_png);

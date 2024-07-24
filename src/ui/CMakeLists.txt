@@ -34,8 +34,8 @@ SET(SOURCES ui_Idle.c
     ui_img_tint_slash_solid_png.c
     fonts/ui_font_NotoCheckEmoji.c
     fonts/ui_font_Poppins14.c
-    fonts/ui_font_Poppins16.c
-    fonts/ui_font_Poppins18.c
+    fonts/ui_font_Poppins20.c
+    fonts/ui_font_Poppins22.c
     fonts/ui_font_SourceCodeCheckEmoji.c)
 
 add_library(ui ${SOURCES})

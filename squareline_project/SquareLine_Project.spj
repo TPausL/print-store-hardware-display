@@ -1479,7 +1479,7 @@
                               {
                                 "nid": -1080457303,
                                 "strtype": "_style/Text_Font",
-                                "strval": "montserrat_20",
+                                "strval": "Poppins20",
                                 "InheritedType": 3
                               }
                             ],
@@ -2346,7 +2346,7 @@
                       {
                         "nid": 290125980,
                         "strtype": "LABEL/Text",
-                        "strval": "Hinzufuegen",
+                        "strval": "Hinzufügen",
                         "InheritedType": 10
                       },
                       {
@@ -8581,7 +8581,22 @@
           },
           {
             "part": "lv.PART.MAIN",
-            "childs": [],
+            "childs": [
+              {
+                "nid": 1265407576,
+                "strtype": "_style/StyleState",
+                "strval": "DEFAULT",
+                "childs": [
+                  {
+                    "nid": -1602942610,
+                    "strtype": "_style/Text_Font",
+                    "strval": "Poppins14",
+                    "InheritedType": 3
+                  }
+                ],
+                "InheritedType": 1
+              }
+            ],
             "nid": -2074638930,
             "strtype": "SCREEN/Style_main",
             "strval": "lv.PART.MAIN, Rectangle, Pad, Text",
@@ -17255,7 +17270,7 @@
                               {
                                 "nid": -1214561578,
                                 "strtype": "_style/Text_Font",
-                                "strval": "montserrat_20",
+                                "strval": "Poppins20",
                                 "InheritedType": 3
                               }
                             ],
@@ -22753,7 +22768,22 @@
           },
           {
             "part": "lv.PART.MAIN",
-            "childs": [],
+            "childs": [
+              {
+                "nid": -536238671,
+                "strtype": "_style/StyleState",
+                "strval": "DEFAULT",
+                "childs": [
+                  {
+                    "nid": 468278310,
+                    "strtype": "_style/Text_Font",
+                    "strval": "Poppins14",
+                    "InheritedType": 3
+                  }
+                ],
+                "InheritedType": 1
+              }
+            ],
             "nid": -463785504,
             "strtype": "SCREEN/Style_main",
             "strval": "lv.PART.MAIN, Rectangle, Pad, Text",
@@ -23081,7 +23111,7 @@
                           {
                             "nid": -1693175924,
                             "strtype": "_style/Text_Font",
-                            "strval": "montserrat_22",
+                            "strval": "Poppins22",
                             "InheritedType": 3
                           }
                         ],
@@ -27841,7 +27871,7 @@
                               {
                                 "nid": 1677961170,
                                 "strtype": "_style/Text_Font",
-                                "strval": "montserrat_20",
+                                "strval": "Poppins20",
                                 "InheritedType": 3
                               }
                             ],
@@ -29595,7 +29625,22 @@
                       },
                       {
                         "part": "lv.PART.MAIN",
-                        "childs": [],
+                        "childs": [
+                          {
+                            "nid": -1862107031,
+                            "strtype": "_style/StyleState",
+                            "strval": "DEFAULT",
+                            "childs": [
+                              {
+                                "nid": 1838203727,
+                                "strtype": "_style/Text_Font",
+                                "strval": "Poppins14",
+                                "InheritedType": 3
+                              }
+                            ],
+                            "InheritedType": 1
+                          }
+                        ],
                         "nid": -1040946168,
                         "strtype": "LABEL/Style_main",
                         "strval": "lv.PART.MAIN, Text, Rectangle, Pad",
@@ -31268,7 +31313,22 @@
           },
           {
             "part": "lv.PART.MAIN",
-            "childs": [],
+            "childs": [
+              {
+                "nid": 1925965819,
+                "strtype": "_style/StyleState",
+                "strval": "DEFAULT",
+                "childs": [
+                  {
+                    "nid": -371303679,
+                    "strtype": "_style/Text_Font",
+                    "strval": "Poppins14",
+                    "InheritedType": 3
+                  }
+                ],
+                "InheritedType": 1
+              }
+            ],
             "nid": 1825344409,
             "strtype": "SCREEN/Style_main",
             "strval": "lv.PART.MAIN, Rectangle, Pad, Text",
@@ -32166,7 +32226,7 @@
                               {
                                 "nid": 1467470735,
                                 "strtype": "_style/Text_Font",
-                                "strval": "montserrat_20",
+                                "strval": "Poppins20",
                                 "InheritedType": 3
                               }
                             ],
@@ -33337,7 +33397,7 @@
                       {
                         "nid": 468776836,
                         "strtype": "_style/Text_Font",
-                        "strval": "montserrat_20",
+                        "strval": "Poppins22",
                         "InheritedType": 3
                       }
                     ],
@@ -38702,7 +38762,7 @@
                               {
                                 "nid": 1297663221,
                                 "strtype": "_style/Text_Font",
-                                "strval": "montserrat_20",
+                                "strval": "Poppins20",
                                 "InheritedType": 3
                               }
                             ],
@@ -40761,7 +40821,7 @@
                   {
                     "nid": 913210960,
                     "strtype": "OBJECT/Name",
-                    "strval": "Label11",
+                    "strval": "ResultHeadlineNotFound",
                     "InheritedType": 10
                   },
                   {
@@ -41544,7 +41604,22 @@
           },
           {
             "part": "lv.PART.MAIN",
-            "childs": [],
+            "childs": [
+              {
+                "nid": -1191926662,
+                "strtype": "_style/StyleState",
+                "strval": "DEFAULT",
+                "childs": [
+                  {
+                    "nid": -1497891678,
+                    "strtype": "_style/Text_Font",
+                    "strval": "Poppins14",
+                    "InheritedType": 3
+                  }
+                ],
+                "InheritedType": 1
+              }
+            ],
             "nid": 1181064141,
             "strtype": "SCREEN/Style_main",
             "strval": "lv.PART.MAIN, Rectangle, Pad, Text",
@@ -41993,9 +42068,9 @@
     "theme_dark": true,
     "theme_color1": 5,
     "theme_color2": 0,
-    "uiExportFolderPath": "C:\\Users\\timoo\\print-store-hardware-display\\src\\ui",
+    "uiExportFolderPath": "/home/timo/print-store-hardware/display/src/ui",
     "projectExportFolderPath": "",
-    "backup_cnt": 202,
+    "backup_cnt": 205,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.11",
     "callfuncsexport": "CPP_FILE",

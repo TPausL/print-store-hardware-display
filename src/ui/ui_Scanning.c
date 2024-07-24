@@ -139,8 +139,8 @@ void ui_Scanning_screen_init(void)
     lv_obj_set_align(ui_Label1, LV_ALIGN_CENTER);
     lv_obj_set_flex_flow(ui_Label1, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_flex_align(ui_Label1, LV_FLEX_ALIGN_END, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
-    lv_label_set_text(ui_Label1, "Scan laueft...");
-    lv_obj_set_style_text_font(ui_Label1, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_label_set_text(ui_Label1, "Scan läuft...");
+    lv_obj_set_style_text_font(ui_Label1, &ui_font_Poppins22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Container8 = lv_obj_create(ui_Scanning);
     lv_obj_remove_style_all(ui_Container8);

@@ -9,6 +9,7 @@ void ui_ResultColor_screen_init(void)
 {
     ui_ResultColor = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_ResultColor, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_text_font(ui_ResultColor, &ui_font_Poppins14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_TopRowS2 = lv_obj_create(ui_ResultColor);
     lv_obj_remove_style_all(ui_TopRowS2);
@@ -171,7 +172,7 @@ void ui_ResultColor_screen_init(void)
     lv_obj_set_y(ui_ScanTextS2, 12);
     lv_obj_set_align(ui_ScanTextS2, LV_ALIGN_CENTER);
     lv_label_set_text(ui_ScanTextS2, "Zurueck");
-    lv_obj_set_style_text_font(ui_ScanTextS2, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_ScanTextS2, &ui_font_Poppins20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_RightColS2 = lv_obj_create(ui_BottomRowS2);
     lv_obj_remove_style_all(ui_RightColS2);
@@ -228,6 +229,7 @@ void ui_ResultColor_screen_init(void)
     lv_obj_set_height(ui_ResultColorText, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_ResultColorText, LV_ALIGN_CENTER);
     lv_label_set_text(ui_ResultColorText, "#A5C674");
+    lv_obj_set_style_text_font(ui_ResultColorText, &ui_font_Poppins14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Container14 = lv_obj_create(ui_ResultColor);
     lv_obj_remove_style_all(ui_Container14);
