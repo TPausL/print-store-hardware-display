@@ -8,13 +8,7 @@
   "bpp": 4,
   "letters": 0,
   "ranges": [
-    "0x20-0x7f",
-    "0xc4",
-    "0xe4",
-    "0xdc",
-    "0xfc",
-    "0xd6",
-    "0xf6"
+    "0x20-0xff"
   ],
   "symbols": "",
   "customparams": "--no-compress --no-prefilter",
