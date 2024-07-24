@@ -11896,7 +11896,7 @@
                   {
                     "nid": -320550211,
                     "strtype": "LABEL/Text",
-                    "strval": "Scan laueft...",
+                    "strval": "Scan läuft...",
                     "InheritedType": 10
                   },
                   {
@@ -11916,7 +11916,7 @@
                           {
                             "nid": -1566652081,
                             "strtype": "_style/Text_Font",
-                            "strval": "montserrat_24",
+                            "strval": "Poppins22",
                             "InheritedType": 3
                           }
                         ],
@@ -26660,7 +26660,7 @@
               {
                 "nid": -756356866,
                 "strtype": "OBJECT/Name",
-                "strval": "Label7",
+                "strval": "ResultHeadlineColor",
                 "InheritedType": 10
               },
               {
@@ -41995,7 +41995,7 @@
     "theme_color2": 0,
     "uiExportFolderPath": "C:\\Users\\timoo\\print-store-hardware-display\\src\\ui",
     "projectExportFolderPath": "",
-    "backup_cnt": 201,
+    "backup_cnt": 202,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.11",
     "callfuncsexport": "CPP_FILE",

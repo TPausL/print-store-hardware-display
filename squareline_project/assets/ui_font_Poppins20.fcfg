@@ -1,10 +1,10 @@
 {
-  "codename": "Poppins18",
+  "codename": "Poppins20",
   "ttf_path": "/assets/Poppins-Regular.ttf",
-  "bin_path": "/assets\\ui_font_Poppins18.bin",
-  "c_path": "/assets\\ui_font_Poppins18.c",
-  "cfg_path": "/assets\\ui_font_Poppins18.fcfg",
-  "size": 18,
+  "bin_path": "/assets\\ui_font_Poppins20.bin",
+  "c_path": "/assets\\ui_font_Poppins20.c",
+  "cfg_path": "/assets\\ui_font_Poppins20.fcfg",
+  "size": 20,
   "bpp": 4,
   "letters": 0,
   "ranges": [
