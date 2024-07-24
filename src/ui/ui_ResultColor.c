@@ -171,7 +171,7 @@ void ui_ResultColor_screen_init(void)
     lv_obj_set_x(ui_ScanTextS2, -5);
     lv_obj_set_y(ui_ScanTextS2, 12);
     lv_obj_set_align(ui_ScanTextS2, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_ScanTextS2, "Zurueck");
+    lv_label_set_text(ui_ScanTextS2, "Zurück");
     lv_obj_set_style_text_font(ui_ScanTextS2, &ui_font_Poppins20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_RightColS2 = lv_obj_create(ui_BottomRowS2);
@@ -201,7 +201,7 @@ void ui_ResultColor_screen_init(void)
     lv_obj_set_x(ui_InOutTextS2, -5);
     lv_obj_set_y(ui_InOutTextS2, 12);
     lv_obj_set_align(ui_InOutTextS2, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_InOutTextS2, "Loeschen");
+    lv_label_set_text(ui_InOutTextS2, "Löschen");
 
     ui_Container10 = lv_obj_create(ui_ResultColor);
     lv_obj_remove_style_all(ui_Container10);

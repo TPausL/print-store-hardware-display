@@ -148,8 +148,8 @@ void ui_Result_screen_init(void)
     lv_obj_remove_style_all(ui_CenterColS3);
     lv_obj_set_width(ui_CenterColS3, lv_pct(31));
     lv_obj_set_height(ui_CenterColS3, lv_pct(100));
-    lv_obj_set_x(ui_CenterColS3, -4);
-    lv_obj_set_y(ui_CenterColS3, -15);
+    lv_obj_set_x(ui_CenterColS3, -3);
+    lv_obj_set_y(ui_CenterColS3, -14);
     lv_obj_set_align(ui_CenterColS3, LV_ALIGN_CENTER);
     lv_obj_set_flex_flow(ui_CenterColS3, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_flex_align(ui_CenterColS3, LV_FLEX_ALIGN_END, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
@@ -171,7 +171,7 @@ void ui_Result_screen_init(void)
     lv_obj_set_x(ui_ScanTextS3, -5);
     lv_obj_set_y(ui_ScanTextS3, 12);
     lv_obj_set_align(ui_ScanTextS3, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_ScanTextS3, "Zurueck");
+    lv_label_set_text(ui_ScanTextS3, "Zurück");
     lv_obj_set_style_text_font(ui_ScanTextS3, &ui_font_Poppins20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_RightColS3 = lv_obj_create(ui_BottomRowS3);
@@ -201,7 +201,7 @@ void ui_Result_screen_init(void)
     lv_obj_set_x(ui_InOutTextS3, -5);
     lv_obj_set_y(ui_InOutTextS3, 12);
     lv_obj_set_align(ui_InOutTextS3, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_InOutTextS3, "Loeschen");
+    lv_label_set_text(ui_InOutTextS3, "Löschen");
 
     ui_Container1 = lv_obj_create(ui_Result);
     lv_obj_remove_style_all(ui_Container1);

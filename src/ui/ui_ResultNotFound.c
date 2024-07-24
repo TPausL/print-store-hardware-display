@@ -171,7 +171,7 @@ void ui_ResultNotFound_screen_init(void)
     lv_obj_set_x(ui_ScanTextS4, -5);
     lv_obj_set_y(ui_ScanTextS4, 12);
     lv_obj_set_align(ui_ScanTextS4, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_ScanTextS4, "Zurueck");
+    lv_label_set_text(ui_ScanTextS4, "Zurück");
     lv_obj_set_style_text_font(ui_ScanTextS4, &ui_font_Poppins20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_RightColS4 = lv_obj_create(ui_BottomRowS4);

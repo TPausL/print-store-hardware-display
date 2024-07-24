@@ -62,7 +62,7 @@ void ui_Error_screen_init(void)
     lv_obj_set_x(ui_ScanTextS5, -5);
     lv_obj_set_y(ui_ScanTextS5, 12);
     lv_obj_set_align(ui_ScanTextS5, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_ScanTextS5, "Zurueck");
+    lv_label_set_text(ui_ScanTextS5, "Zurück");
     lv_obj_set_style_text_font(ui_ScanTextS5, &ui_font_Poppins20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_RightColS5 = lv_obj_create(ui_BottomRowS5);
@@ -80,9 +80,10 @@ void ui_Error_screen_init(void)
     lv_obj_set_width(ui_ErrorText, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_ErrorText, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_ErrorText, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_ErrorText, "Es ist ein Fehler aufgetreten!");
+    lv_label_set_text(ui_ErrorText, "Es ist ein \nFehler aufgetreten!");
     lv_obj_set_style_text_color(ui_ErrorText, lv_color_hex(0xCDCECD), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_ErrorText, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui_ErrorText, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_ErrorText, &ui_font_Poppins22, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Image13 = lv_img_create(ui_Error);

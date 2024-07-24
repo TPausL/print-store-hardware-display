@@ -17250,7 +17250,7 @@
                       {
                         "nid": -1993544201,
                         "strtype": "LABEL/Text",
-                        "strval": "Zurueck",
+                        "strval": "Zurück",
                         "InheritedType": 10
                       },
                       {
@@ -17322,8 +17322,8 @@
                     "flags": 17,
                     "strtype": "OBJECT/Position",
                     "intarray": [
-                      -4,
-                      -15
+                      -3,
+                      -14
                     ],
                     "InheritedType": 7
                   },
@@ -18137,7 +18137,7 @@
                       {
                         "nid": -103207181,
                         "strtype": "LABEL/Text",
-                        "strval": "Loeschen",
+                        "strval": "Löschen",
                         "InheritedType": 10
                       },
                       {
@@ -27851,7 +27851,7 @@
                       {
                         "nid": 1007037103,
                         "strtype": "LABEL/Text",
-                        "strval": "Zurueck",
+                        "strval": "Zurück",
                         "InheritedType": 10
                       },
                       {
@@ -28738,7 +28738,7 @@
                       {
                         "nid": 2106043517,
                         "strtype": "LABEL/Text",
-                        "strval": "Loeschen",
+                        "strval": "Löschen",
                         "InheritedType": 10
                       },
                       {
@@ -32206,7 +32206,7 @@
                       {
                         "nid": -338590538,
                         "strtype": "LABEL/Text",
-                        "strval": "Zurueck",
+                        "strval": "Zurück",
                         "InheritedType": 10
                       },
                       {
@@ -33366,7 +33366,7 @@
               {
                 "nid": 1623035232,
                 "strtype": "LABEL/Text",
-                "strval": "Es ist ein Fehler aufgetreten!",
+                "strval": "Es ist ein \\nFehler aufgetreten!",
                 "InheritedType": 10
               },
               {
@@ -33393,6 +33393,12 @@
                           255
                         ],
                         "InheritedType": 7
+                      },
+                      {
+                        "nid": -1702093281,
+                        "strtype": "_style/Text_Align",
+                        "strval": "CENTER",
+                        "InheritedType": 3
                       },
                       {
                         "nid": 468776836,
@@ -38742,7 +38748,7 @@
                       {
                         "nid": -462104467,
                         "strtype": "LABEL/Text",
-                        "strval": "Zurueck",
+                        "strval": "Zurück",
                         "InheritedType": 10
                       },
                       {
@@ -42070,7 +42076,7 @@
     "theme_color2": 0,
     "uiExportFolderPath": "/home/timo/print-store-hardware/display/src/ui",
     "projectExportFolderPath": "",
-    "backup_cnt": 211,
+    "backup_cnt": 214,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.11",
     "callfuncsexport": "CPP_FILE",

@@ -99,8 +99,8 @@ void scanImage()
         }
         else if (err == 404)
         {
-            /* const char *error = response["message"];
-            lv_label_set_text(ui_ResultHeadlineNotFound, error); */
+            const char *error = response["message"];
+            lv_label_set_text(ui_ResultHeadlineNotFound, error);
             lv_disp_load_scr(ui_ResultNotFound);
             free(image);
             return;
@@ -114,9 +114,8 @@ void scanImage()
     }
     else
     {
-        lv_label_set_text(ui_ErrorText, "Fehler beim Senden des Bildes");
+        lv_label_set_text(ui_ErrorText, "Fehler beim\nSenden des Bildes");
         lv_disp_load_scr(ui_Error);
-        free(image);
         Serial.println("Error sending image data to server");
         // error sreen?
     }
@@ -175,7 +174,7 @@ void addColor()
     }
     else
     {
-        lv_label_set_text(ui_ErrorText, "Fehler beim Senden des Bildes");
+        lv_label_set_text(ui_ErrorText, "Fehler beim\nSenden des Bildes");
         lv_disp_load_scr(ui_Error);
         Serial.println("Error sending image data to server");
     }
